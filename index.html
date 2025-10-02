@@ -235,21 +235,37 @@
     function getDataUrl(){ try{ const u=new URL(location.href); return u.searchParams.get('data') || DEFAULT_DATA_URL; }catch{ return DEFAULT_DATA_URL; } }
     function parseLesson(v){ const m = (v||'').toString().match(/\d+/); return m? parseInt(m[0],10) : 1; }
 
-    function parseCSV(text){
-      const out=[];
-      text.replace(/^\uFEFF/, '') // BOM
-          .split(/\r?\n/)
-          .forEach(line=>{
-            const t=line.trim(); if(!t) return;
-            const parts=t.split(';');
-            if(parts.length<2) return;
-            const en=(parts[0]||'').trim();
-            const cs=(parts[1]||'').trim();
-            const lesson=parseLesson(parts[2]||'1');
-            if(en && cs){ out.push({en, cs, lesson}); }
-          });
-      return out;
-    }
+      function parseCSV(text) {
+          const out = [];
+          const stripBOM = text.replace(/^\uFEFF/, '');
+          const lines = stripBOM.split(/\r?\n/);
+
+          for (const line of lines) {
+              const raw = line.trim();
+              if (!raw) continue;
+              const fields = [];
+              let cur = '', inQuotes = false;
+              for (let i = 0; i < raw.length; i++) {
+                  const ch = raw[i];
+                  if (ch === '"') {
+                      if (inQuotes && raw[i + 1] === '"') { cur += '"'; i++; }
+                      else inQuotes = !inQuotes;
+                  } else if (ch === ';' && !inQuotes) {
+                      fields.push(cur); cur = '';
+                  } else {
+                      cur += ch;
+                  }
+              }
+              fields.push(cur);
+
+              const en = (fields[0] || '').trim().replace(/^to\s+/i, ''); // ignoruj úvodní "to "
+              const cs = (fields[1] || '').trim();                        // může obsahovat víc významů oddělených čárkou
+              const lesson = parseLesson(fields[2] || '1');               // 4 / lekce4 / L4 → 4
+
+              if (en && cs) out.push({ en, cs, lesson });
+          }
+          return out;
+      }
 
     async function loadWords(){
       const url = getDataUrl();
@@ -401,26 +417,65 @@
 
     // ===== Kontrola =====
     function ensureStat(w){ const id = uidOf(w); stats[id] = stats[id]||{ok:0,bad:0}; return stats[id]; }
-    function check(){
-      if(!current || !session.active) return;
-      const user = norm(answerEl.value);
-      const expect = norm(current.expect);
-      if(!user){ resultEl.textContent='Zadej odpověď.'; resultEl.className='result warn'; return; }
-      const s = ensureStat(current.w);
-      if(user===expect){
-        s.ok++; session.ok++;
-        resultEl.textContent='Správně!'; resultEl.className='result good';
-        current=null; setTimeout(()=>{ if(session.active){ pickNext(); } }, 700);
-      } else {
-        s.bad++; session.bad++;
-        resultEl.innerHTML = `Špatně. Správně: <strong>${current.expect}</strong>`;
-        resultEl.className='result bad';
+    function check() {
+        function stripParens(s) {
+              let out = '', depth = 0;
+              for (const ch of String(s)) {
+                  if (ch === '(' || ch === '[') { depth++; continue; }
+                  if (ch === ')' || ch === ']') { if (depth > 0) depth--; continue; }
+                  if (depth === 0) out += ch;
+              }
+              return out;
+          }
+          function cleanDashesSpaces(s) {
+              let t = '';
+              for (const ch of String(s)) {
+                  if (ch === '-' || ch === '–' || ch === '—') t += ' ';
+                  else t += ch;
+              }
+              const parts = t.split(' ');
+              const acc = []; for (const p of parts) { if (p) acc.push(p); }
+              return acc.join(' ').trim();
+          }
+          function variantsOf(text) {
+              if (text == null) return [];
+              let cleaned = stripParens(String(text));
+              let tmp = cleaned;
+              [';', '/', '|'].forEach(sep => { tmp = tmp.split(sep).join(','); });
+              tmp = tmp.replace(' nebo ', ',').replace(' NEBO ', ',').replace(' Nebo ', ',');
+              const rawParts = tmp.split(',');
+              const parts = [];
+              for (let p of rawParts) {
+                  p = cleanDashesSpaces(p);
+                  if (!p) continue;
+                  const lower = p.toLowerCase();
+                  if (lower.startsWith('to ')) p = p.slice(3);
+                  p = cleanDashesSpaces(p);
+                  if (p) parts.push(norm(p));
+              }
+              const uniq = Array.from(new Set(parts)).filter(Boolean);
+              if (uniq.length === 0) {
+                  const single = cleanDashesSpaces(String(text));
+                  if (single) return [norm(single)];
+              }
+              return uniq;
+          }
+          if (!current || !session.active) return;
+          let userRaw = cleanDashesSpaces(answerEl.value || '');
+          if (!userRaw) { resultEl.textContent = 'Zadej odpověď.'; resultEl.className = 'result warn'; return; }
+          const lower = userRaw.toLowerCase();
+          if (lower.startsWith('to ')) userRaw = userRaw.slice(3);
+          const user = norm(userRaw);
+          const s = ensureStat(current.w);
+          const variants = variantsOf(current.expect);
+          const ok = variants.includes(user);
+          if (ok) { s.ok++; session.ok++; resultEl.textContent = 'Správně!'; resultEl.className = 'result good'; current = null; setTimeout(() => { if (session.active) { pickNext(); } }, 700); }
+          else { s.bad++; session.bad++; resultEl.innerHTML = `Špatně. Správně: <strong>${current.expect}</strong>`; resultEl.className = 'result bad'; }
+          saveJSON(KEY_STATS, stats);
+          okTodayEl.textContent = String(session.ok); badTodayEl.textContent = String(session.bad);
+          okToday_b.textContent = String(session.ok); badToday_b.textContent = String(session.bad);
+          updateTotalsUI();
       }
-      saveJSON(KEY_STATS, stats);
-      okTodayEl.textContent = String(session.ok); badTodayEl.textContent = String(session.bad);
-      okToday_b.textContent = String(session.ok); badToday_b.textContent = String(session.bad);
-      updateTotalsUI();
-    }
 
     checkBtn.addEventListener('click', check);
     answerEl.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ check(); }});
