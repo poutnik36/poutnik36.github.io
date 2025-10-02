@@ -48,7 +48,7 @@
     <div class="wrap">
       <nav>
         <div class="flex">
-          <strong>🔁 Opakování slovíček</strong>
+          <strong>Angličtina pro policejní praxi - slovíčka</strong>
           <span class="pill" id="countInfo">0 slov</span>
           <span class="pill" id="filterInfo" title="Filtrovaný počet">0 vybráno</span>
           <span class="pill" id="dataInfo" title="Zdroj dat">CSV</span>
@@ -167,10 +167,6 @@
   </main>
 
   <script>
-    // ===== Konfigurace zdroje dat =====
-    // Ve stejné složce jako index.html vytvoř "slovicka.csv" (UTF-8, bez hlavičky): anglicky,cesky,lekce
-    // Např.: witness,svědek,lekce1
-    // URL lze změnit parametrem ?data=NAZEV.csv
     const DEFAULT_DATA_URL = 'slovicka.csv';
 
     // ===== Stav & util =====
@@ -245,7 +241,7 @@
           .split(/\r?\n/)
           .forEach(line=>{
             const t=line.trim(); if(!t) return;
-            const parts=t.split(',');
+            const parts=t.split(';');
             if(parts.length<2) return;
             const en=(parts[0]||'').trim();
             const cs=(parts[1]||'').trim();
