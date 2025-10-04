@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Opakování slovíček – Mini aplikace</title>
-  <meta name="description" content="Lehká webová aplikace pro opakování anglických slovíček podle lekcí. Čte slovíčka z CSV souboru." />
+  <title>Angličtina pro policejní praxi – Opakování slovíček</title>
+  <meta name="description" content="Lehká webová aplikace pro opakování anglických slovíček podle lekcí. Načítá slovíčka z CSV, první řádek CSV obsahuje názvy lekcí." />
   <style>
     :root{
       --bg:#0b1020; --card:#121832; --text:#e8eefc; --muted:#9aa6c8; --acc:#7aa2ff; --border:#243055; --good:#16a34a; --bad:#ef4444; --warn:#f59e0b;
@@ -16,13 +16,13 @@
     html,body{height:100%}
     body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--text)}
     header{position:sticky; top:0; z-index:10; backdrop-filter:saturate(1.2) blur(8px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--border)}
-    .wrap{max-width:1000px; margin-inline:auto; padding:1rem}
+    .wrap{max-width:1100px; margin-inline:auto; padding:1rem}
     nav{display:flex; align-items:center; justify-content:space-between}
     .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .9rem; border:1px solid var(--border); background:var(--card); color:var(--text); border-radius:.8rem; cursor:pointer}
     .btn:hover{transform:translateY(-1px)}
     .btn.secondary{background:transparent}
     .grid{display:grid; gap:1rem}
-    @media(min-width:1000px){.grid{grid-template-columns:2fr 1fr}}
+    @media(min-width:1000px){.grid{grid-template-columns:1.2fr 1fr}}
     .card{background:var(--card); border:1px solid var(--border); border-radius:1rem; padding:1rem}
     h2{margin:0 0 .5rem; font-size:1.25rem}
     label{display:block; font-weight:600; margin:.4rem 0 .2rem}
@@ -36,11 +36,27 @@
     .good{color:var(--good)}
     .bad{color:var(--bad)}
     .warn{color:var(--warn)}
-    .flex{display:flex; gap:.6rem; align-items:center}
+    .flex{display:flex; gap:.6rem; align-items:center; flex-wrap:wrap}
     .space{height:1rem}
     .badge{display:inline-flex; gap:.35rem; align-items:center; padding:.2rem .5rem; border:1px solid var(--border); border-radius:.6rem; font-size:.85rem; color:var(--muted)}
-    .checkboxes{display:grid; grid-template-columns:repeat(auto-fill, minmax(48px,1fr)); gap:.4rem}
-    .dim{opacity:.7}
+
+    /* Lekce – svislý seznam kvůli dlouhým názvům */
+    .checkboxes{display:flex; flex-direction:column; gap:.4rem}
+    .checkboxes label{display:flex; gap:.6rem; align-items:flex-start}
+    .checkboxes input{margin-top:.2rem}
+
+    /* Trénink – dvě karty vedle sebe */
+    .pairgrid{display:grid; gap:.8rem}
+    @media(min-width:900px){ .pairgrid{ grid-template-columns:1fr 1fr; } }
+    .innercard{background:color-mix(in oklab, var(--card) 92%, var(--acc) 8%); border:1px dashed var(--border); border-radius:.8rem; padding:1rem; min-height:140px; display:flex; align-items:center; justify-content:center}
+    #prompt{font-size:1.8rem; font-weight:800; text-align:center}
+
+    /* „Psaní přímo do karty“ */
+    .fakeinputwrap{display:flex; align-items:center; justify-content:center; width:100%}
+    #answer{background:transparent; border:none; outline:none; width:100%; font-size:1.6rem; text-align:center; color:var(--text)}
+    #answer::placeholder{color:color-mix(in oklab, var(--muted) 70%, transparent)}
+
+    .btnrow{display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin-top:.6rem}
   </style>
 </head>
 <body>
@@ -48,7 +64,7 @@
     <div class="wrap">
       <nav>
         <div class="flex">
-          <strong>Angličtina pro policejní praxi - slovíčka</strong>
+          <strong>🔁 Opakování slovíček</strong>
           <span class="pill" id="countInfo">0 slov</span>
           <span class="pill" id="filterInfo" title="Filtrovaný počet">0 vybráno</span>
           <span class="pill" id="dataInfo" title="Zdroj dat">CSV</span>
@@ -107,76 +123,53 @@
 
         <div class="space"></div>
         <div class="flex">
-          <button class="btn" id="startBtn">▶️ Start</button>
+          <button class="btn" id="startBtn"▶️ Start</button>
           <button class="btn secondary" id="resetBtn">↺ Reset</button>
           <span class="badge" id="sessionInfo">Neaktivní</span>
           <span class="badge" id="timerInfo" hidden>⏱ 00:00</span>
         </div>
       </div>
 
-      <aside class="card dim" id="summaryTop" aria-hidden="true">
-        <h2>Souhrn (živě)</h2>
-        <div class="muted">Sezení</div>
-        <div class="flex">
-          <span class="pill">Správně: <strong id="okToday">0</strong></span>
-          <span class="pill">Špatně: <strong id="badToday">0</strong></span>
-          <span class="pill">Zbývá: <strong id="leftToday">0</strong></span>
-        </div>
-        <div class="space"></div>
-        <div class="muted">Celkem</div>
-        <div class="flex">
-          <span class="pill">Pokusy: <strong id="attemptsAll">0</strong></span>
-          <span class="pill">Úspěšnost: <strong id="accuracyAll">0%</strong></span>
-        </div>
-      </aside>
+      <!-- Panely Souhrn byly na přání odstraněny -->
     </section>
 
     <section class="card" id="practice" style="margin-top:1rem">
       <h2>Trénink</h2>
       <div class="muted" id="promptMeta">Vyber lekce a spusť sezení.</div>
-      <div id="prompt" style="font-size:1.8rem; font-weight:800; margin:.2rem 0 0"></div>
-      <div class="muted" id="promptField"></div>
-      <div class="space"></div>
-      <div class="row">
-        <input id="answer" type="text" placeholder="Sem napiš odpověď…" disabled />
-        <button class="btn" id="checkBtn" disabled>✅ Zkontrolovat</button>
-      </div>
-      <div class="result" id="result"></div>
-      <div class="space"></div>
-      <div class="flex">
-        <button class="btn secondary" id="revealBtn" disabled>👀 Zobrazit řešení</button>
-        <button class="btn" id="nextBtn" disabled>➡️ Další</button>
-      </div>
-    </section>
 
-    <section class="card" id="summaryBottom" style="margin-top:1rem">
-      <h2>Souhrn</h2>
-      <div class="muted">Sezení</div>
-      <div class="flex">
-        <span class="pill">Správně: <strong id="okToday_b">0</strong></span>
-        <span class="pill">Špatně: <strong id="badToday_b">0</strong></span>
-        <span class="pill">Zbývá: <strong id="leftToday_b">0</strong></span>
+      <div class="pairgrid" style="margin-top:.6rem">
+        <div class="innercard" id="promptCard">
+          <div id="prompt"></div>
+        </div>
+        <div class="innercard" id="answerCard">
+          <div class="fakeinputwrap"><input id="answer" type="text" placeholder="Sem napiš odpověď…" disabled /></div>
+          <div class="btnrow">
+            <button class="btn" id="checkBtn" disabled>✅ Zkontrolovat</button>
+            <button class="btn secondary" id="dontKnowBtn" disabled>🤷‍♂️ Nevím</button>
+            <button class="btn secondary" id="hintBtn" disabled>💡 Nápověda</button>
+          </div>
+        </div>
       </div>
-      <div class="space"></div>
-      <div class="muted">Celkem</div>
-      <div class="flex">
-        <span class="pill">Pokusy: <strong id="attemptsAll_b">0</strong></span>
-        <span class="pill">Úspěšnost: <strong id="accuracyAll_b">0%</strong></span>
-      </div>
+
+      <div class="result" id="result"></div>
     </section>
   </main>
 
   <script>
+    // ===== Konfigurace CSV =====
+    // 1. řádek: názvy lekcí oddělené středníkem
+    // další řádky: angličtina;čeština;číslo_lekce
     const DEFAULT_DATA_URL = 'slovicka.csv';
 
     // ===== Stav & util =====
-    const KEY_STATS = 'vt_stats_v3';
-    const KEY_SETTINGS = 'vt_settings_v3';
+    const KEY_STATS = 'vt_stats_v4';
+    const KEY_SETTINGS = 'vt_settings_v4';
 
-    let WORDS = [];           // {en, cs, lesson}
-    let LESSONS = [];         // např. [1,2,3]
+    let WORDS = [];                 // {en, cs, lesson}
+    let LESSONS = [];               // [1,2,...]
+    let LESSON_TITLES = [];         // index 0 -> lekce 1
 
-    const norm = (s) => (s||'').toString().normalize('NFD').replace(/\p{Diacritic}/gu,'').toLowerCase().trim();
+    const norm = (s) => (s||'').toString().normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
     const uidOf = (w) => `${w.en}__${w.cs}`;
     const loadJSON = (k,d)=>{ try{return JSON.parse(localStorage.getItem(k)) ?? d;}catch{return d;} };
     const saveJSON = (k,v)=> localStorage.setItem(k, JSON.stringify(v));
@@ -201,28 +194,15 @@
     const timerInfoEl = document.getElementById('timerInfo');
 
     const promptEl = document.getElementById('prompt');
-    const promptFieldEl = document.getElementById('promptField');
     const promptMetaEl = document.getElementById('promptMeta');
     const answerEl = document.getElementById('answer');
     const resultEl = document.getElementById('result');
-    const nextBtn = document.getElementById('nextBtn');
     const checkBtn = document.getElementById('checkBtn');
-    const revealBtn = document.getElementById('revealBtn');
-
-    const okTodayEl = document.getElementById('okToday');
-    const badTodayEl = document.getElementById('badToday');
-    const leftTodayEl = document.getElementById('leftToday');
-    const attemptsAllEl = document.getElementById('attemptsAll');
-    const accuracyAllEl = document.getElementById('accuracyAll');
-
-    const okToday_b = document.getElementById('okToday_b');
-    const badToday_b = document.getElementById('badToday_b');
-    const leftToday_b = document.getElementById('leftToday_b');
-    const attemptsAll_b = document.getElementById('attemptsAll_b');
-    const accuracyAll_b = document.getElementById('accuracyAll_b');
+    const dontKnowBtn = document.getElementById('dontKnowBtn');
+    const hintBtn = document.getElementById('hintBtn');
 
     const countInfoEl = document.getElementById('countInfo');
-    theFilterInfoEl = document.getElementById('filterInfo');
+    const filterInfoEl = document.getElementById('filterInfo');
     const dataInfoEl = document.getElementById('dataInfo');
 
     const themeBtn = document.getElementById('themeBtn');
@@ -231,41 +211,39 @@
     function applyTheme(){ document.documentElement.setAttribute('data-theme', settings.theme||'dark'); }
     themeBtn.addEventListener('click', ()=>{ settings.theme = settings.theme==='light'?'dark':'light'; saveJSON(KEY_SETTINGS, settings); applyTheme(); });
 
-    // ===== CSV načítání =====
+    // ===== CSV načítání a parsování =====
     function getDataUrl(){ try{ const u=new URL(location.href); return u.searchParams.get('data') || DEFAULT_DATA_URL; }catch{ return DEFAULT_DATA_URL; } }
     function parseLesson(v){ const m = (v||'').toString().match(/\d+/); return m? parseInt(m[0],10) : 1; }
 
-      function parseCSV(text) {
-          const out = [];
-          const stripBOM = text.replace(/^\uFEFF/, '');
-          const lines = stripBOM.split(/\r?\n/);
-
-          for (const line of lines) {
-              const raw = line.trim();
-              if (!raw) continue;
-              const fields = [];
-              let cur = '', inQuotes = false;
-              for (let i = 0; i < raw.length; i++) {
-                  const ch = raw[i];
-                  if (ch === '"') {
-                      if (inQuotes && raw[i + 1] === '"') { cur += '"'; i++; }
-                      else inQuotes = !inQuotes;
-                  } else if (ch === ';' && !inQuotes) {
-                      fields.push(cur); cur = '';
-                  } else {
-                      cur += ch;
-                  }
-              }
-              fields.push(cur);
-
-              const en = (fields[0] || '').trim().replace(/^to\s+/i, ''); // ignoruj úvodní "to "
-              const cs = (fields[1] || '').trim();                        // může obsahovat víc významů oddělených čárkou
-              const lesson = parseLesson(fields[2] || '1');               // 4 / lekce4 / L4 → 4
-
-              if (en && cs) out.push({ en, cs, lesson });
-          }
-          return out;
+    function splitCsvSemicolons(line){
+      const out=[]; let cur=''; let inQ=false; for(let i=0;i<line.length;i++){
+        const ch=line[i];
+        if(ch==='"'){
+          if(inQ && line[i+1]==='"'){ cur+='"'; i++; }
+          else inQ=!inQ;
+        }else if(ch===';' && !inQ){ out.push(cur); cur=''; }
+        else cur+=ch;
       }
+      out.push(cur); return out;
+    }
+
+    function stripBOM(s){ return s && s.charCodeAt(0)===0xFEFF ? s.slice(1) : s; }
+
+    function parseCSVWithTitles(text){
+      const lines = stripBOM(text).split(/\r?\n/).map(l=>l.trim());
+      let idx=0; while(idx<lines.length && !lines[idx]) idx++; // první neprázdný řádek = tituly
+      const titles = idx<lines.length ? splitCsvSemicolons(lines[idx]).map(s=>s.trim()).filter(Boolean) : [];
+      const words=[];
+      for(let i=idx+1;i<lines.length;i++){
+        const raw=lines[i]; if(!raw) continue;
+        const f = splitCsvSemicolons(raw);
+        const en = (f[0]||'').trim().replace(/^to\s+/i,''); // odstraň „to “ na začátku
+        const cs = (f[1]||'').trim();                      // může mít víc významů oddělených čárkou
+        const lesson = parseLesson(f[2]||'1');
+        if(en && cs) words.push({en, cs, lesson});
+      }
+      return {titles, words};
+    }
 
     async function loadWords(){
       const url = getDataUrl();
@@ -274,66 +252,60 @@
         const resp = await fetch(url, {cache:'no-store'});
         if(!resp.ok) throw new Error('HTTP '+resp.status);
         const txt = await resp.text();
-        WORDS = parseCSV(txt);
+        const parsed = parseCSVWithTitles(txt);
+        LESSON_TITLES = parsed.titles;
+        WORDS = parsed.words;
       }catch(err){
-        console.warn('Nepodařilo se načíst CSV, používám vestavěný vzorek.', err);
+        console.warn('Načtení CSV selhalo, používám vestavěná demo data.', err);
         dataInfoEl.textContent = 'vestavěná data';
+        LESSON_TITLES = ['Organizational structure of the police','International police cooperation','Initiation of criminal proceedings and pre-trial proceedings','Crime','Organized crime','Public order and security','Traffic security and prevention'];
         WORDS = [
           {en:'police officer', cs:'policista', lesson:1},
-          {en:'badge', cs:'služební odznak', lesson:1},
-          {en:'crime scene', cs:'místo činu', lesson:2},
-          {en:'evidence', cs:'důkaz', lesson:2},
-          {en:'breathalyzer', cs:'alkoholtester', lesson:3},
-          {en:"driver's licence", cs:'řidičský průkaz', lesson:3}
+          {en:'crime scene', cs:'místo činu', lesson:4},
+          {en:'breathalyzer', cs:'alkoholtester', lesson:7}
         ];
+      }
+      const maxLesson = Math.max(0, ...WORDS.map(w=>w.lesson));
+      if(LESSON_TITLES.length < maxLesson){
+        for(let i=LESSON_TITLES.length;i<maxLesson;i++){ LESSON_TITLES[i] = `Lekce ${i+1}`; }
       }
       LESSONS = Array.from(new Set(WORDS.map(w=>w.lesson))).sort((a,b)=>a-b);
       if(!settings.lessons.length){ settings.lessons = LESSONS.slice(); saveJSON(KEY_SETTINGS, settings); }
       else { settings.lessons = settings.lessons.filter(x=> LESSONS.includes(x)); saveJSON(KEY_SETTINGS, settings); }
     }
 
-    // ===== Lekce (checkboxy) =====
+    function titleOfLesson(n){ return LESSON_TITLES[n-1] || `Lekce ${n}`; }
+
+    // ===== Lekce (checkboxy – pod sebou, s názvy) =====
     function renderLessons(){
       lessonsBox.innerHTML='';
-      LESSONS.forEach(i=>{
+      const maxL = Math.max(LESSON_TITLES.length, ...WORDS.map(w=>w.lesson), 0);
+      for(let i=1;i<=maxL;i++){
         const id = 'lesson_'+i;
-        const wrap = document.createElement('label');
-        wrap.style.display='flex'; wrap.style.gap='.4rem'; wrap.style.alignItems='center'; wrap.style.justifyContent='center';
-        wrap.innerHTML = `<input type="checkbox" id="${id}" value="${i}"> <span>L${i}</span>`;
-        const cb = wrap.querySelector('input');
+        const label = document.createElement('label');
+        label.innerHTML = `<input type="checkbox" id="${id}" value="${i}"> <span>${titleOfLesson(i)}</span>`;
+        const cb = label.querySelector('input');
         cb.checked = settings.lessons.includes(i);
         cb.addEventListener('change', ()=>{
           if(cb.checked){ if(!settings.lessons.includes(i)) settings.lessons.push(i); }
           else { settings.lessons = settings.lessons.filter(x=>x!==i); }
           saveJSON(KEY_SETTINGS, settings); refreshCounts();
         });
-        lessonsBox.appendChild(wrap);
-      });
+        lessonsBox.appendChild(label);
+      }
     }
-    selectAllBtn.addEventListener('click', ()=>{ settings.lessons = LESSONS.slice(); saveJSON(KEY_SETTINGS, settings); renderLessons(); refreshCounts(); });
+    selectAllBtn.addEventListener('click', ()=>{ const maxL=Math.max(LESSON_TITLES.length, ...WORDS.map(w=>w.lesson), 0); settings.lessons = Array.from({length:maxL}, (_,k)=>k+1); saveJSON(KEY_SETTINGS, settings); renderLessons(); refreshCounts(); });
     clearAllBtn.addEventListener('click', ()=>{ settings.lessons = []; saveJSON(KEY_SETTINGS, settings); renderLessons(); refreshCounts(); });
 
-    // ===== Výběr & filtrace =====
+    // ===== Filtrace =====
     function filteredWords(){ return WORDS.filter(w=> settings.lessons.includes(w.lesson)); }
-
-    // ===== Statistika =====
-    function ensureStat(w){ const id = uidOf(w); stats[id] = stats[id]||{ok:0,bad:0}; return stats[id]; }
-    function totalStats(){ let ok=0,bad=0; Object.values(stats).forEach(x=>{ ok+=x.ok||0; bad+=x.bad||0; }); const attempts=ok+bad; const acc = attempts? Math.round(ok*100/attempts):0; return {ok,bad,attempts,acc}; }
-    function updateTotalsUI(){
-      const t = totalStats();
-      attemptsAllEl.textContent = t.attempts; accuracyAllEl.textContent = t.acc + '%';
-      attemptsAll_b.textContent = t.attempts; accuracyAll_b.textContent = t.acc + '%';
-    }
 
     // ===== Sezení =====
     let session = {active:false, target:20, left:0, ok:0, bad:0, timed:false, deadline:null, timerId:null};
-    let current = null; // {w, ask, expect, dir}
+    let current = null; // {w, ask, expect, dir, hintTarget}
+    let hintIndex = 0;
 
-    function setPracticeEnabled(on){
-      [answerEl, checkBtn, revealBtn, nextBtn].forEach(el=>{ el.disabled = !on; });
-      document.getElementById('summaryTop').classList.toggle('dim', !on);
-      document.getElementById('summaryTop').setAttribute('aria-hidden', String(!on));
-    }
+    function setPracticeEnabled(on){ [answerEl, checkBtn, dontKnowBtn, hintBtn].forEach(el=> el.disabled = !on); }
 
     function startSession(){
       const pool = filteredWords();
@@ -358,8 +330,6 @@
       } else { timerInfoEl.hidden = true; }
 
       sessionInfoEl.textContent = `Běží – cíl ${session.target}`;
-      okTodayEl.textContent = '0'; badTodayEl.textContent = '0'; leftTodayEl.textContent = String(session.left);
-      okToday_b.textContent = '0'; badToday_b.textContent = '0'; leftToday_b.textContent = String(session.left);
       resultEl.textContent=''; resultEl.className='result';
       setPracticeEnabled(true);
       pickNext();
@@ -375,121 +345,102 @@
       promptMetaEl.textContent = msg || 'Sezení ukončeno.';
     }
 
-    function resetSession(){ endSession('Resetováno.'); promptEl.textContent=''; promptFieldEl.textContent=''; answerEl.value=''; resultEl.textContent=''; }
+    function resetSession(){ endSession('Resetováno.'); promptEl.textContent=''; answerEl.value=''; resultEl.textContent=''; }
 
     startBtn.addEventListener('click', startSession);
     resetBtn.addEventListener('click', resetSession);
 
     // ===== Výběr dalšího slova =====
     function chooseWord(){
-      const pool = filteredWords();
-      if(!pool.length) return null;
+      const pool = filteredWords(); if(!pool.length) return null;
       const m = modeEl.value;
       if(m==='random') return pool[Math.floor(Math.random()*pool.length)];
-      const arr = pool.slice().sort((a,b)=>{
-        const sa = stats[uidOf(a)]||{ok:0,bad:0};
-        const sb = stats[uidOf(b)]||{ok:0,bad:0};
-        const wa = (sa.bad||0) - (sa.ok||0);
-        const wb = (sb.bad||0) - (sb.ok||0);
-        return wb - wa;
-      });
-      const k = Math.max(3, Math.ceil(arr.length*0.3));
-      return arr[Math.floor(Math.random()*k)];
+      const arr = pool.slice().sort((a,b)=>{ const sa = stats[uidOf(a)]||{ok:0,bad:0}; const sb = stats[uidOf(b)]||{ok:0,bad:0}; const wa = (sa.bad||0) - (sa.ok||0); const wb = (sb.bad||0) - (sb.ok||0); return wb - wa; });
+      const k = Math.max(3, Math.ceil(arr.length*0.3)); return arr[Math.floor(Math.random()*k)];
     }
+
+    function stripParens(s){ let out='', depth=0; for (const ch of String(s)){ if (ch==='('||ch==='['){ depth++; continue;} if (ch===')'||ch===']'){ if (depth>0) depth--; continue;} if(depth===0) out+=ch; } return out; }
+    function cleanDashesSpaces(s){ let t=''; for (const ch of String(s)){ if (ch==='-'||ch==='–'||ch==='—') t+=' '; else t+=ch; } return t.split(' ').filter(Boolean).join(' ').trim(); }
+    function firstVariantRaw(text){ if(text==null) return ''; let cleaned = stripParens(String(text)); let tmp = cleaned; [';', '|', '/'].forEach(sep=> tmp = tmp.split(sep)[0]);
+      const beforeComma = tmp.split(',')[0]; return cleanDashesSpaces(beforeComma); }
 
     function pickNext(){
       if(!session.active){ promptMetaEl.textContent='Vyber lekce a spusť sezení.'; return; }
       if(session.left<=0){ endSession('Hotovo – splněn cílový počet slov.'); return; }
       resultEl.textContent=''; resultEl.className='result'; answerEl.value='';
-      const w = chooseWord();
-      if(!w){ promptEl.textContent='(Žádná slova)'; promptFieldEl.textContent=''; return; }
+      const w = chooseWord(); if(!w){ promptEl.textContent='(Žádná slova)'; return; }
       const dir = directionEl.value==='mix' ? (Math.random()<0.5?'en-cs':'cs-en') : directionEl.value;
       const ask = dir==='en-cs' ? w.en : w.cs;
       const expect = dir==='en-cs' ? w.cs : w.en;
-      current = {w, ask, expect, dir};
+      current = {w, ask, expect, dir, hintTarget: firstVariantRaw(expect)};
+      hintIndex = 0;
       promptEl.textContent = ask;
-      promptFieldEl.textContent = `Lekce: ${w.lesson}`;
-      promptMetaEl.textContent = `Cíl: ${session.target} • Zbývá: ${session.left}`;
+      const lessonTitle = titleOfLesson(w.lesson);
+      promptMetaEl.textContent = `Cíl: ${session.target} • Zbývá: ${session.left} • Správně: ${session.ok} • Špatně: ${session.bad} • Lekce: ${lessonTitle}`;
       answerEl.focus();
-      // po vypsání příkladu odečteme zbývající počet
-      session.left--; leftTodayEl.textContent = String(session.left); leftToday_b.textContent = String(session.left);
+      session.left--; refreshCounts();
     }
 
-    // ===== Kontrola =====
-    function ensureStat(w){ const id = uidOf(w); stats[id] = stats[id]||{ok:0,bad:0}; return stats[id]; }
-    function check() {
-        function stripParens(s) {
-              let out = '', depth = 0;
-              for (const ch of String(s)) {
-                  if (ch === '(' || ch === '[') { depth++; continue; }
-                  if (ch === ')' || ch === ']') { if (depth > 0) depth--; continue; }
-                  if (depth === 0) out += ch;
-              }
-              return out;
-          }
-          function cleanDashesSpaces(s) {
-              let t = '';
-              for (const ch of String(s)) {
-                  if (ch === '-' || ch === '–' || ch === '—') t += ' ';
-                  else t += ch;
-              }
-              const parts = t.split(' ');
-              const acc = []; for (const p of parts) { if (p) acc.push(p); }
-              return acc.join(' ').trim();
-          }
-          function variantsOf(text) {
-              if (text == null) return [];
-              let cleaned = stripParens(String(text));
-              let tmp = cleaned;
-              [';', '/', '|'].forEach(sep => { tmp = tmp.split(sep).join(','); });
-              tmp = tmp.replace(' nebo ', ',').replace(' NEBO ', ',').replace(' Nebo ', ',');
-              const rawParts = tmp.split(',');
-              const parts = [];
-              for (let p of rawParts) {
-                  p = cleanDashesSpaces(p);
-                  if (!p) continue;
-                  const lower = p.toLowerCase();
-                  if (lower.startsWith('to ')) p = p.slice(3);
-                  p = cleanDashesSpaces(p);
-                  if (p) parts.push(norm(p));
-              }
-              const uniq = Array.from(new Set(parts)).filter(Boolean);
-              if (uniq.length === 0) {
-                  const single = cleanDashesSpaces(String(text));
-                  if (single) return [norm(single)];
-              }
-              return uniq;
-          }
-          if (!current || !session.active) return;
-          let userRaw = cleanDashesSpaces(answerEl.value || '');
-          if (!userRaw) { resultEl.textContent = 'Zadej odpověď.'; resultEl.className = 'result warn'; return; }
-          const lower = userRaw.toLowerCase();
-          if (lower.startsWith('to ')) userRaw = userRaw.slice(3);
-          const user = norm(userRaw);
-          const s = ensureStat(current.w);
-          const variants = variantsOf(current.expect);
-          const ok = variants.includes(user);
-          if (ok) { s.ok++; session.ok++; resultEl.textContent = 'Správně!'; resultEl.className = 'result good'; current = null; setTimeout(() => { if (session.active) { pickNext(); } }, 700); }
-          else { s.bad++; session.bad++; resultEl.innerHTML = `Špatně. Správně: <strong>${current.expect}</strong>`; resultEl.className = 'result bad'; }
-          saveJSON(KEY_STATS, stats);
-          okTodayEl.textContent = String(session.ok); badTodayEl.textContent = String(session.bad);
-          okToday_b.textContent = String(session.ok); badToday_b.textContent = String(session.bad);
-          updateTotalsUI();
-      }
+    // ===== Kontrola + synonyma =====
+    function variantsOf(text){
+      if (text==null) return [];
+      let cleaned = stripParens(String(text));
+      let tmp = cleaned; [';', '/', '|'].forEach(sep => { tmp = tmp.split(sep).join(','); });
+      tmp = tmp.replace(/\bnebo\b/gi, ',');
+      const rawParts = tmp.split(',');
+      const parts = [];
+      for (let p of rawParts){ p = cleanDashesSpaces(p); if (!p) continue; const lower = p.toLowerCase(); if (lower.startsWith('to ')) p = p.slice(3); p = cleanDashesSpaces(p); if (p) parts.push(norm(p)); }
+      const uniq = Array.from(new Set(parts)).filter(Boolean);
+      if (uniq.length===0){ const single = cleanDashesSpaces(String(text)); if (single) return [norm(single)]; }
+      return uniq;
+    }
+
+    function check(){
+      if(!current || !session.active) return;
+      let userRaw = cleanDashesSpaces(answerEl.value || '');
+      if (!userRaw){ resultEl.textContent='Zadej odpověď.'; resultEl.className='result warn'; return; }
+      const lower = userRaw.toLowerCase(); if (lower.startsWith('to ')) userRaw = userRaw.slice(3);
+      const user = norm(userRaw);
+      const s = stats[uidOf(current.w)] = stats[uidOf(current.w)]||{ok:0,bad:0};
+      const variants = variantsOf(current.expect);
+      const ok = variants.includes(user);
+      if(ok){ s.ok++; session.ok++; resultEl.textContent='Správně!'; resultEl.className='result good'; current=null; setTimeout(()=>{ if(session.active){ pickNext(); } }, 700); }
+      else { s.bad++; session.bad++; resultEl.innerHTML = `Špatně. Správně: <strong>${stripParens(firstVariantRaw(current.expect))}</strong>`; resultEl.className='result bad'; }
+      saveJSON(KEY_STATS, stats);
+      const lt = current ? titleOfLesson(current.w.lesson) : '';
+      promptMetaEl.textContent = `Cíl: ${session.target} • Zbývá: ${session.left} • Správně: ${session.ok} • Špatně: ${session.bad}` + (lt?` • Lekce: ${lt}`:'');
+    }
 
     checkBtn.addEventListener('click', check);
     answerEl.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ check(); }});
-    revealBtn.addEventListener('click', ()=>{ if(current){ resultEl.innerHTML = `Řešení: <strong>${current.expect}</strong>`; resultEl.className='result'; }});
-    nextBtn.addEventListener('click', pickNext);
 
-    // ===== Nastavení přenos do state =====
+    // ===== Nevím + Nápověda =====
+    dontKnowBtn.addEventListener('click', ()=>{
+      if(!current || !session.active) return;
+      const fill = firstVariantRaw(current.expect);
+      if(fill) answerEl.value = fill; // pouze vyplní, nekontroluje
+      answerEl.focus();
+    });
+
+    hintBtn.addEventListener('click', ()=>{
+      if(!current || !session.active) return;
+      if(answerEl.value && answerEl.value.trim()!=='') return; // hint funguje jen při prázdném poli
+      const target = String(current.hintTarget||'');
+      if(hintIndex < target.length){
+        hintIndex++;
+        answerEl.value = target.slice(0, hintIndex);
+      }
+      answerEl.focus();
+    });
+
+    // ===== Nastavení → state =====
     directionEl.addEventListener('change', ()=>{ settings.direction = directionEl.value; saveJSON(KEY_SETTINGS, settings); });
     modeEl.addEventListener('change', ()=>{ settings.mode = modeEl.value; saveJSON(KEY_SETTINGS, settings); });
     targetCountEl.addEventListener('change', ()=>{ settings.target = Math.max(1, parseInt(targetCountEl.value||'20',10)); saveJSON(KEY_SETTINGS, settings); });
     timedEl.addEventListener('change', ()=>{ settings.timed = !!timedEl.checked; saveJSON(KEY_SETTINGS, settings); });
     timeLimitEl.addEventListener('change', ()=>{ settings.timeMin = Math.max(1, parseInt(timeLimitEl.value||'10',10)); saveJSON(KEY_SETTINGS, settings); });
 
-    // ===== Přehled počtů =====
+    // ===== Počty nahoře v headeru =====
     function refreshCounts(){
       countInfoEl.textContent = `${WORDS.length} slov`;
       filterInfoEl.textContent = `${filteredWords().length} vybráno`;
@@ -505,7 +456,6 @@
       await loadWords();
       renderLessons();
       refreshCounts();
-      updateTotalsUI();
       setPracticeEnabled(false);
     }
     init();
