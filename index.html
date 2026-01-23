@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Opakování slovíček</title>
+  <title>Opakování slovíček – Mini aplikace</title>
   <meta name="description" content="Lehká webová aplikace pro opakování anglických slovíček podle lekcí (CSV: první řádek názvy lekcí)." />
   <style>
     :root{
@@ -51,11 +51,16 @@
     .innercard{background:color-mix(in oklab, var(--card) 92%, var(--acc) 8%); border:1px dashed var(--border); border-radius:.8rem; padding:1rem; min-height:140px; display:flex; align-items:center; justify-content:center}
     #prompt{font-size:1.8rem; font-weight:800; text-align:center}
 
-    /* „Psaní přímo do karty“ */
+    /* textarea „psaní do karty“ */
     .fakeinputwrap{display:flex; align-items:center; justify-content:center; width:100%}
     #answer{background:transparent; border:none; outline:none; width:100%; font-size:1.4rem; line-height:1.5; text-align:center; color:var(--text); resize:none; overflow-y:auto; white-space:pre-wrap; word-break:break-word}
     #answer::placeholder{color:color-mix(in oklab, var(--muted) 70%, transparent)}
+
     .btnrow{display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin-top:.6rem}
+
+    /* KARTIČKY */
+    .flashcard{width:100%; min-height:100px; display:flex; align-items:center; justify-content:center; text-align:center; font-size:1.6rem; font-weight:800; cursor:pointer; user-select:none; padding:0 1rem}
+    .flashcard .hint{font-weight:600; opacity:.8}
   </style>
 </head>
 <body>
@@ -63,7 +68,7 @@
     <div class="wrap">
       <nav>
         <div class="flex">
-          <strong>Angličtina pro policejní praxi - slovíčka</strong>
+          <strong>🔁 Opakování slovíček</strong>
           <span class="pill" id="countInfo">0 slov</span>
           <span class="pill" id="filterInfo" title="Filtrovaný počet">0 vybráno</span>
           <span class="pill" id="dataInfo" title="Zdroj dat">CSV</span>
@@ -93,6 +98,7 @@
             <select id="mode">
               <option value="random">Náhodně</option>
               <option value="weak">Upřednostnit slabá</option>
+              <option value="flashcards">Kartičky</option>
             </select>
           </div>
         </div>
@@ -140,15 +146,17 @@
         <div class="innercard" id="promptCard">
           <div id="prompt"></div>
         </div>
+
         <div class="innercard" id="answerCard">
-          <div class="fakeinputwrap">
-            <textarea id="answer" rows="1" placeholder="Sem napiš odpověď…" disabled></textarea>
-          </div>
-          <div class="btnrow">
+          <!-- běžné psaní -->
+          <div class="fakeinputwrap"><textarea id="answer" rows="1" placeholder="Sem napiš odpověď…" disabled></textarea></div>
+          <div class="btnrow" id="answerBtns">
             <button class="btn" id="checkBtn" disabled>✅ Zkontrolovat</button>
             <button class="btn secondary" id="dontKnowBtn" disabled>🤷‍♂️ Nevím</button>
             <button class="btn secondary" id="hintBtn" disabled>💡 Nápověda</button>
           </div>
+          <!-- kartičky -->
+          <div class="flashcard" id="flashcard" hidden title="Klikni pro zobrazení / další"></div>
         </div>
       </div>
 
@@ -198,6 +206,8 @@
     const checkBtn = document.getElementById('checkBtn');
     const dontKnowBtn = document.getElementById('dontKnowBtn');
     const hintBtn = document.getElementById('hintBtn');
+    const answerBtns = document.getElementById('answerBtns');
+    const flashcardEl = document.getElementById('flashcard');
 
     const countInfoEl = document.getElementById('countInfo');
     const filterInfoEl = document.getElementById('filterInfo');
@@ -214,7 +224,6 @@
     function parseLesson(v){ const m = (v||'').toString().match(/\d+/); return m? parseInt(m[0],10) : 1; }
     function stripBOM(s){ return s && s.charCodeAt(0)===0xFEFF ? s.slice(1) : s; }
 
-    // semicolon-aware split (s uvozovkami)
     function splitCsvSemicolons(line){
       const out=[]; let cur=''; let inQ=false;
       for(let i=0;i<line.length;i++){
@@ -234,8 +243,7 @@
 
     function parseCSVWithTitles(text){
       const lines = stripBOM(text).split(/\r?\n/);
-      // najdi první NEPRÁZDNÝ řádek = tituly
-      let idx=0; while(idx<lines.length && !lines[idx].trim()) idx++;
+      let idx=0; while(idx<lines.length && !lines[idx].trim()) idx++; // první NEPRÁZDNÝ řádek = tituly
       if(idx>=lines.length) return {titles:[], words:[]};
 
       const titles = splitCsvSemicolons(lines[idx].trim()).map(s=>s.trim());
@@ -244,8 +252,8 @@
         const raw = lines[i].trim();
         if(!raw) continue;
         const f = splitCsvSemicolons(raw);
-        const en = (f[0]||'').trim().replace(/^to\s+/i,''); // ignoruj "to "
-        const cs = (f[1]||'').trim();                      // může mít víc významů oddělených čárkou
+        const en = (f[0]||'').trim().replace(/^to\s+/i,''); // ignoruj „to “
+        const cs = (f[1]||'').trim();                      // synonyma čárkou
         const lesson = parseLesson(f[2]||'1');
         if(en && cs) words.push({en, cs, lesson});
       }
@@ -256,30 +264,18 @@
       const url = getDataUrl();
       dataInfoEl.textContent = url;
       const resp = await fetch(url, {cache:'no-store'});
-      if(!resp.ok){
-        throw new Error('Načtení CSV selhalo: HTTP '+resp.status);
-      }
+      if(!resp.ok){ throw new Error('Načtení CSV selhalo: HTTP '+resp.status); }
       const txt = await resp.text();
       const parsed = parseCSVWithTitles(txt);
       LESSON_TITLES = parsed.titles;
       WORDS = parsed.words;
-      if(!WORDS.length){
-        throw new Error('CSV neobsahuje žádná slovíčka.');
-      }
-      // Pokud nejsou vybrané lekce v settings, předvyber všechny detekované
-      const maxLesson = Math.max(...WORDS.map(w=>w.lesson));
-      if(settings.lessons.length===0){
-        settings.lessons = Array.from(new Set(WORDS.map(w=>w.lesson))).sort((a,b)=>a-b);
-        saveJSON(KEY_SETTINGS, settings);
-      } else {
-        // očisti podle reálně existujících
-        const allowed = new Set(WORDS.map(w=>w.lesson));
-        settings.lessons = settings.lessons.filter(n=>allowed.has(n));
-        if(settings.lessons.length===0){
-          settings.lessons = Array.from(allowed).sort((a,b)=>a-b);
-        }
-        saveJSON(KEY_SETTINGS, settings);
-      }
+      if(!WORDS.length){ throw new Error('CSV neobsahuje žádná slovíčka.'); }
+
+      // inicializuj vybrané lekce
+      const allowed = Array.from(new Set(WORDS.map(w=>w.lesson))).sort((a,b)=>a-b);
+      if(settings.lessons.length===0){ settings.lessons = allowed; }
+      else { settings.lessons = settings.lessons.filter(n=>allowed.includes(n)); if(!settings.lessons.length) settings.lessons = allowed; }
+      saveJSON(KEY_SETTINGS, settings);
     }
 
     function titleOfLesson(n){ return LESSON_TITLES[n-1] || `Lekce ${n}`; }
@@ -313,16 +309,64 @@
     // ===== Filtrace =====
     function filteredWords(){ return WORDS.filter(w=> settings.lessons.includes(w.lesson)); }
 
+    // ===== Pomocné pro kontrolu/varianty =====
+    function stripParens(s){
+      let out='', depth=0; for (const ch of String(s)){
+        if (ch==='('||ch==='['){ depth++; continue; }
+        if (ch===')'||ch===']'){ if (depth>0) depth--; continue; }
+        if(depth===0) out+=ch;
+      } return out;
+    }
+    function cleanDashesSpaces(s){
+      let t=''; for (const ch of String(s)){ if (ch==='-'||ch==='–'||ch==='—') t+=' '; else t+=ch; }
+      return t.split(' ').filter(Boolean).join(' ').trim();
+    }
+    function variantsRaw(text){
+      if (text==null) return [];
+      let cleaned = stripParens(String(text));
+      let tmp = cleaned;
+      [';', '/', '|'].forEach(sep => { tmp = tmp.split(sep).join(','); });
+      tmp = tmp.replace(/\bnebo\b/gi, ',');
+      const rawParts = tmp.split(','); // čeština: synonyma čárkou
+      const parts = [];
+      for (let p of rawParts){
+        p = cleanDashesSpaces(p).trim();
+        if (!p) continue;
+        const lower = p.toLowerCase();
+        if (lower.startsWith('to ')) p = p.slice(3);
+        p = cleanDashesSpaces(p);
+        if (p) parts.push(p);
+      }
+      // deduplikace dle normalizace
+      const seen = new Set(); const out=[];
+      for(const p of parts){ const key = norm(p); if(!seen.has(key)){ seen.add(key); out.push(p); } }
+      return out;
+    }
+    function variantsNorm(text){ return variantsRaw(text).map(v=>norm(v)); }
+    function firstVariantRaw(text){ const arr = variantsRaw(text); return arr.length? arr[0] : ''; }
+
     // ===== Sezení =====
     let session = {active:false, target:20, left:0, ok:0, bad:0, timed:false, deadline:null, timerId:null};
-    let current = null; // {w, ask, expect, dir, hintTarget}
-    let hintIndex = 0;
+    let current = null; // {w, ask, expect, dir}
+    let flashRevealed = false;
+
+    function isFlashcardsMode(){ return modeEl.value === 'flashcards'; }
 
     function setPracticeEnabled(on){
-      [answerEl, checkBtn, dontKnowBtn, hintBtn].forEach(el=> el.disabled = !on);
+      // základní povolení prvků
+      [answerEl, checkBtn, dontKnowBtn, hintBtn].forEach(el=> el.disabled = !on || isFlashcardsMode());
+      // viditelnost podle režimu
+      if(isFlashcardsMode()){
+        answerEl.hidden = true;
+        answerBtns.hidden = true;
+        flashcardEl.hidden = !on;
+      } else {
+        answerEl.hidden = false;
+        answerBtns.hidden = false;
+        flashcardEl.hidden = true;
+      }
     }
 
-    // auto-grow textarea
     function autogrow(el){
       el.style.height = 'auto';
       el.style.height = Math.min(200, el.scrollHeight) + 'px';
@@ -375,66 +419,38 @@
     // ===== Výběr dalšího slova =====
     function chooseWord(){
       const pool = filteredWords(); if(!pool.length) return null;
-      const m = modeEl.value;
+      const m = (modeEl.value==='weak' ? 'weak' : 'random'); // výběr slov (flashcards jen mění UI)
       if(m==='random') return pool[Math.floor(Math.random()*pool.length)];
       const arr = pool.slice().sort((a,b)=>{ const sa = stats[uidOf(a)]||{ok:0,bad:0}; const sb = stats[uidOf(b)]||{ok:0,bad:0}; const wa = (sa.bad||0) - (sa.ok||0); const wb = (sb.bad||0) - (sb.ok||0); return wb - wa; });
       const k = Math.max(3, Math.ceil(arr.length*0.3)); return arr[Math.floor(Math.random()*k)];
     }
 
-    function stripParens(s){
-      let out='', depth=0; for (const ch of String(s)){
-        if (ch==='('||ch==='['){ depth++; continue; }
-        if (ch===')'||ch===']'){ if (depth>0) depth--; continue; }
-        if(depth===0) out+=ch;
-      } return out;
-    }
-    function cleanDashesSpaces(s){
-      let t=''; for (const ch of String(s)){ if (ch==='-'||ch==='–'||ch==='—') t+=' '; else t+=ch; }
-      return t.split(' ').filter(Boolean).join(' ').trim();
-    }
-    function variantsRaw(text){ // pro hint i kontrolu (ne-normalizované)
-      if (text==null) return [];
-      let cleaned = stripParens(String(text));
-      let tmp = cleaned;
-      [';', '/', '|'].forEach(sep => { tmp = tmp.split(sep).join(','); });
-      tmp = tmp.replace(/\bnebo\b/gi, ',');
-      const rawParts = tmp.split(','); // čeština: synonyma čárkou
-      const parts = [];
-      for (let p of rawParts){
-        p = cleanDashesSpaces(p).trim();
-        if (!p) continue;
-        const lower = p.toLowerCase();
-        if (lower.startsWith('to ')) p = p.slice(3);
-        p = cleanDashesSpaces(p);
-        if (p) parts.push(p);
-      }
-      // deduplikace dle normalizace (bez diakritiky)
-      const seen = new Set(); const out=[];
-      for(const p of parts){ const key = norm(p); if(!seen.has(key)){ seen.add(key); out.push(p); } }
-      return out;
-    }
-    function variantsNorm(text){ return variantsRaw(text).map(v=>norm(v)); }
-    function firstVariantRaw(text){ const arr = variantsRaw(text); return arr.length? arr[0] : ''; }
-
     function pickNext(){
       if(!session.active){ promptMetaEl.textContent='Vyber lekce a spusť sezení.'; return; }
       if(session.left<=0){ endSession('Hotovo – splněn cílový počet slov.'); return; }
       resultEl.textContent=''; resultEl.className='result'; answerEl.value=''; autogrow(answerEl);
+      flashRevealed = false;
       const w = chooseWord(); if(!w){ promptEl.textContent='(Žádná slova)'; return; }
       const dir = directionEl.value==='mix' ? (Math.random()<0.5?'en-cs':'cs-en') : directionEl.value;
       const ask = dir==='en-cs' ? w.en : w.cs;
       const expect = dir==='en-cs' ? w.cs : w.en;
-      current = {w, ask, expect, dir, hintTarget: firstVariantRaw(expect)};
+      current = {w, ask, expect, dir};
+
       promptEl.textContent = ask;
       promptMetaEl.textContent = `Cíl: ${session.target} • Zbývá: ${session.left} • Správně: ${session.ok} • Špatně: ${session.bad} • Lekce: ${ (LESSON_TITLES[w.lesson-1] || ('Lekce '+w.lesson)) }`;
+
+      if(isFlashcardsMode()){
+        flashcardEl.innerHTML = `<span class="hint">Ukázat →</span>`;
+      }
+
       answerEl.focus();
-      session.left--; // po vykreslení případu odečteme zbývající počet
+      session.left--; // po zobrazení případu snížíme left
       refreshCounts();
     }
 
     // ===== Kontrola + synonyma =====
     function check(){
-      if(!current || !session.active) return;
+      if(!current || !session.active || isFlashcardsMode()) return; // v kartičkách nekontrolujeme
       let userRaw = cleanDashesSpaces(answerEl.value || '');
       if (!userRaw){ resultEl.textContent='Zadej odpověď.'; resultEl.className='result warn'; return; }
       const user = norm(userRaw);
@@ -455,18 +471,16 @@
       }
     }
 
-    // ===== Nevím + Nápověda =====
+    // ===== Nevím + Nápověda (mimo kartičky) =====
     dontKnowBtn.addEventListener('click', ()=>{
-      if(!current || !session.active) return;
+      if(!current || !session.active || isFlashcardsMode()) return;
       const fill = firstVariantRaw(current.expect);
       if(fill){ answerEl.value = fill; autogrow(answerEl); }
       answerEl.focus();
     });
 
-    // Nápověda: vezme aktuální obsah pole a pokud některá varianta (bez diakritiky) začíná na stejný začátek,
-    // doplní další znak (podle původního textu s diakritikou).
     hintBtn.addEventListener('click', ()=>{
-      if(!current || !session.active) return;
+      if(!current || !session.active || isFlashcardsMode()) return;
       const rawVariants = variantsRaw(current.expect);
       let cur = (answerEl.value || '').trim();
 
@@ -487,15 +501,29 @@
           return;
         }
       }
-      // žádná varianta neodpovídá začátku → nic neděláme
     });
 
     checkBtn.addEventListener('click', check);
     answerEl.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ e.preventDefault(); check(); }});
 
+    // ===== Kartičky – klik pro ukázání / další =====
+    function showFlashcard(){
+      if(!current) return;
+      if(!flashRevealed){
+        // zobraz celý překlad (včetně synonym z CSV)
+        flashRevealed = true;
+        flashcardEl.textContent = String(current.expect);
+      } else {
+        // další slovíčko
+        pickNext();
+      }
+    }
+    flashcardEl.addEventListener('click', showFlashcard);
+    flashcardEl.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); showFlashcard(); }});
+
     // ===== Přenos nastavení do state =====
     directionEl.addEventListener('change', ()=>{ settings.direction = directionEl.value; saveJSON(KEY_SETTINGS, settings); });
-    modeEl.addEventListener('change', ()=>{ settings.mode = modeEl.value; saveJSON(KEY_SETTINGS, settings); });
+    modeEl.addEventListener('change', ()=>{ settings.mode = modeEl.value; saveJSON(KEY_SETTINGS, settings); setPracticeEnabled(session.active); });
     targetCountEl.addEventListener('change', ()=>{ settings.target = Math.max(1, parseInt(targetCountEl.value||'20',10)); saveJSON(KEY_SETTINGS, settings); });
     timedEl.addEventListener('change', ()=>{ settings.timed = !!timedEl.checked; saveJSON(KEY_SETTINGS, settings); });
     timeLimitEl.addEventListener('change', ()=>{ settings.timeMin = Math.max(1, parseInt(timeLimitEl.value||'10',10)); saveJSON(KEY_SETTINGS, settings); });
@@ -525,8 +553,7 @@
       }
       renderLessons();
       refreshCounts();
-      setPracticeEnabled(false);
-      autogrow(answerEl);
+      setPracticeEnabled(false); // povolí se až po Start
     }
     init();
   </script>
