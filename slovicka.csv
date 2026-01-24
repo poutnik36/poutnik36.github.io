@@ -1,76 +1,54 @@
 ﻿Organizational structure of the police;International police cooperation;Initiation of criminal proceedings and pre-trial proceedings;Crime;Organized crime;Public order and security;Traffic security and prevention
-law enforcement;policie;1
-policing;výkon policejní činnosti;1
+policing;výkon policejní činnosti, výkon policejní služby, policejní práce, výkon policejní činnosti, dohled, ochrana;1
 police;policie, policejní sbor, policisté;1
-jurisdiction;jurisdikce, soudní pravomoci;1
 investigative;vyšetřovací;1
 conform to;odpovídat čemu;1
 headquarters;ústředí, centrála, ředitelství;1
-deputy;náměstek, zástupce;1
 operational centre;operační středisko;1
-forensic;soudní, forenzní;1
 forensic laboratory;kriminalistická laboratoř;1
 logistics;logistika;1
 personnel department;osobní oddělení;1
-supervise;dohlížet, kontrolovat, řídit;1
 detachment;odloučené pracoviště;1
 criminal cases;trestní případy;1
-intelligence agency;zpravodajská výzvědná služba;1
+intelligence agency;zpravodajská výzvědná služba, zpravodajská služba, výzvědná služba;1
 Security Information Service;Bezpečnostní Informační Služba, BIS;1
 Office for Foreigh Relations and Information;Úřad pro zahraniční styky a informace, ÚZSI;1
 National Security Strategy;národní bezpečnostní strategie;1
 high-impact economic crime;závažná hospodářská trestná činnost;1
-fraud;podvod;1
-tax evasion;daňové úniky;1
-money laundering;praní peněz;1
 extreme phenomenon;extrémní jev;1
 psychotropic substances;psychotropní látky;1
-trafficking;nedovolené obchodování, nezákonné obchodování;1
-juvenile delinquency;kriminalita mládeže;1
 intellectual property;duševní vlastnictví;1
-theft;krádež;1
 exercise one's duties;vykonávat povinnosti, plnit své povinnosti, vykonávat službu;1
 carry due identification;být řádně označen;1
 present identification;prokázat se;1
 demand a testimony;požadovat vysvětlení;1
 demand personal identification;požadovat prokázání totožnosti;1
-detain;zajistit;1
-take into custody;vzít do vazby;1
 supervise safety of traffic;dohlížet nad bezpečností silničního provozu;1
 supervise the smoothness of traffic;dohlížet nad plynulostí silničního provozu;1
 register;evidence;1
 means of identification;identifikační označení;1
 line of duty;výkon služby;1
-rank;hodnost;1
+rank;hodnost, služební zařazení;1
 epaulette;nárameník;1
 badge;odznak;1
 sewn-on;našitý;1
 national emblem;státní znak;1
 reported crimes;oznámené trestné činy;1
-trespass;neoprávněné vniknutí;1
 missing person;pohřešovaná osoba;1
 emergency event;stav nouze, mimořádná událost;1
-road safety;bezpečnost silničního provozu;1
-detect;zjišťovat, odhalovat;1
 deliberate;úmyslný;1
-perpetrator;pachatel;1
 searches;pátrání;1
-search;hledat, pátrat, prohledávat, vykonat osobní prohlídku;1
 get involved;účastnit se;1
-cause;příčina;1
 flow of road traffic;plynulost silničního provozu;1
 alien;cizinec;1
 residence alien;cizinec s povolením k dlouhodobému pobytu;1
 border;hranice;1
 accession;vstup;1
 fulfil;plnit;1
-premises;areál, komplex budov;1
-kidnapping;únos;1
 aim at;zaměřit se na;1
-combat;boj, potírání;1
+combat;boj, potírání, bojovat;1
 illegal drug trade;nelegální obchod s drogami;1
 cooperate;spolupracovat;1
-struggle;boj;1
 bomb disposal;zneškodňování výbušnin;1
 provide for;zajišťovat;1
 constitutional official;ústavní činitel;1
@@ -80,7 +58,6 @@ patrolling flights;hlídkové lety;1
 reconnaissance flights;průzkumné lety;1
 traffic monitoring;monitorování dopravy;1
 documentation gathering;shromažďování dokumentace;1
-operate;provozovat;1
 Air Rescue Service;letecká záchranná služba;1
 repatriation of afflicted people;repatriace postižených osob;1
 implement;provádět, uskutečňovat;1
@@ -89,8 +66,6 @@ forensic science;forenzní věda;1
 carry out expertise;provádět expertýzu, vypracovat odborné posudky;1
 device;zařízení, přístroj;1
 education;vzdělávání;1
-training;výcvik;1
-Act;zákon;1
 sound judgement;zdravý úsudek;1
 open attitude;otevřenost;1
 maturity;zralost, vyspělost;1
@@ -98,7 +73,7 @@ fairness;spravedlnost, slušnost, čestnost;1
 communication skills;komunikační dovednosti;1
 leadership skills;schopnost vést, řídit;1
 management skills;manažerské dovednosti;1
-issue;otázky, problémy;1
+issue;otázky, problémy, položka, část, vydat, vyslat, zveřejnit;1
 serve citizens;sloužit občanům;1
 satisfy civil society's needs;uspokojovat potřeby občanů;1
 duties;povinnosti, úkoly;1
@@ -112,18 +87,14 @@ Police College;vyšší policejní škola;1
 Training Centre;výcvikové centrum;1
 Police Academy;Policejní akademie;1
 train;provádět výcvik, školit;1
-provide;poskytovat, zabezpečit;1
-law enforcement;prosazování zákona;1
 further vocational training;další odborné vzdělávání, další profesní výcvik;1
 adjust;přizpůsobit, nastavit;1
 profile of a police graduate;profil absolventa policejní školy;1
-determine;stanovit, určit;1
-conduct;vedení, řízení;1
+conduct;vedení, řízení, provádět, vést;1
 Criminal and Investigation Police;služba kriminální policie a vyšetřování;1
 Alien Police;služba pohraniční a cizinecké policie;1
 Public Order Police;služba pořádkové policie;1
 Traffic Police;služba dopravní policie;1
-obtain;získat;1
 required;požadované;1
 Bachelor Degree;bakalářský stupeň studia;1
 Master Degree;magisterský stupeň studia;1
@@ -139,7 +110,6 @@ establishment;stálý stav;1
 civil support staff;občanští civilní zaměstnanci;1
 traffic warden;příslušník služby dopravní policie, dopravní policista;1
 national;celostátní;1
-police force;policejní sbor;1
 local authority areas;místní územní celky;1
 tripartite relationship;třístranné vztahy;1
 central government;centrální vláda;1
@@ -148,7 +118,6 @@ Police Chief Officer;velitel;1
 Secretary of State for the Home Department;ministr vnitra;1
 Home Secretary;ministr vnitra;1
 local council tax;daně odváděné obecnímu úřadu;1
-policing;výkon policejní služby;1
 employee of the state;státní zaměstnanec;1
 local government;místní samospráva;1
 independent police holder;nezávislý úředník;1
@@ -159,14 +128,9 @@ middle rank;poddůstojnická hodnost;1
 senior rank;důstojnická hodnost;1
 promotion from, promotion within;povýšení dle zákona o policii;1
 appointment;jmenování do hodnosti, jmenování do funkce;1
-promote;povýšit;1
-maintain;posílit, podpořit;1
 efficiency;účinnost;1
 effectivness;efektivita;1
-determine;určit, stanovit;1
 key operational objectives;klíčové operační úkoly;1
-issue;položka, část, vydat, vyslat, zveřejnit;1
-tackle;zvládnout;1
 street crime;pouliční trestná činnost;1
 drug-related crime;trestná činnost spojená s obchodováním s drogami;1
 gun crime; trestná činnost spojená s obchodováním se zbraněmi;1
@@ -178,7 +142,6 @@ Assistant Inspector of Constabulary;zástupce ředitele ředitelství policie;1
 responsible;odpovědný;1
 independent in operational matters;samostatný při rozhodování o úkolech a akcích;1
 draft;návrh;1
-rank;hodnost, služební zařazení;1
 rail network;železniční síť;1
 duty;povinnost;1
 run the prison;provozovat vězení;1
@@ -186,7 +149,7 @@ immigration;imigrace, přistěhovalectví;1
 customs;celní správa;1
 excise duty;nepřímá spotřební daň;1
 responsibility;odpovědnost;1
-protection of life and property;ochrana života a majetku;1
+protection of life and property;ochrana života a majetku | chránit život a majetek;1
 prevention of crime;prevence trestné činnosti;1
 detection of offenders;vypátrání pachatelů;1
 preservation of public tranquility;ochrana veřejného pořádku;1
@@ -195,46 +158,31 @@ court of appeal;odvolací soud;1
 criminal proceedings;trestní řízení, trestní stíhání;1
 civil proceedings;občanskoprávní řízení;1
 Magistrate court;městský soud;1
-summary offence;přestupek;1
 minor offence;přestupek;1
-indictable offence;žalovatelný trestný čin, čin soudně trestný;1
 jury;porota;1
-defendant;obžalovaný;1
-charge with;obvinit z;1
-witness;svědek;1
-evidence;důkaz;1
 committal proceeding;řízení ve věci;1
 limited powers;omezené pravomoci;1
-penalty;trest, pokuta;1
 juvenile court;soud pro mladistvé;1
 public is excluded;s vyloučením veřejnosti;1
-Crown court;Královský soud;1
-judge;soudce;1
 sum up the evidence;shrnout důkazy;1
 guilty;vinen;1
 innocent;nevinen;1
 beyond any reasonable doubt;nade vší pochybnost;1
-punishment;trest;1
-prison sentence;trest odnětí svobody;1
 Criminal Division;trestní kolegium;1
 Civil division;občanskoprávní kolegium;1
-conviction;usvědčení, rozsudek;1
-sentence;druh trestu;1
 allow appeal;přijmout odvolání;1
 dismiss appeal;zamítnout odvolání;1
 House of Lords;Sněmovna lordů;1
 European Court of Justice;Evropský soudní dvůr;1
 European Court of Human Rights;Evropský soud pro lidská práva;1
-jurisdiction;jurisdikce, soudní pravomoci;1
 violate the rights;porušovat práva;1
-law enforcement;bezpečnostní složky, policie, úřad šerifa;1
 retain;podržet si, ponechat si;1
 amendment;dodatek;1
 reserve;vyhradit, zajistit;1
 fragmented;roztříštěný;1
 fragmentation;roztříštění, rozdělení;1
 exemplify;ilustrovat, doložit příkladem;1
-task force;operační skupina, zásahová jednotka, komando;1
+task force;operační skupina, zásahová jednotka, komando, zvláštní jednotka;1
 state police;státní policie;1
 highway patrol;dálniční policie;1
 municipal;městský;1
@@ -244,22 +192,16 @@ causeway;silnice vedená po hrázi;1
 capitol;parlament, sídlo vlády;1
 capitol police;ochranná služba;1
 department;oddělení;1
-conduct;provádět;1
 township;správní oblast, okres;1
-policing;policejní práce, výkon policejní činnosti, dohled, ochrana;1
 district;správní oblast, obvod, okres;1
 Sheriff's office;úřad šerifa;1
-official;úředník, funkcionář;1
-exercise;uplatňovat;1
+exercise;uplatňovat, vykonávat;1
 police chief;velitel policie;1
 enforce law;prosazovat právo;1
-jurisdiction;jurisdikce, soudní pravomoci;1
-investigation;vyšetřování;1
 criminalistics laboratory;kriminalistická laboratoř;1
 coroner;koroner, úřední ohledavač mrtvol;1
-jail;věznice;1
+jail;věznice, vězení;1
 to jail;uvěznit, poslat do vězení;1
-operate;provozovat, spravovat;1
 crime scene;místo činu;1
 at a crime scene;na místě činu;1
 disaster scene;místo neštěstí, místo katastrofy;1
@@ -269,85 +211,59 @@ command;velení;1
 reside;sídlit;1
 Justice Department;Ministerstvo spravedlnosti;1
 Treasury Department;Ministerstvo financí;1
-intelligence agency;zpravodajská služba, výzvědná služba;1
-commit a crime;spáchat trestný čin;1
-deal with;řešit, zabývat se;1
 affair;otázka, záležitost, věc;1
 fugitive;osoba na útěku, uprchlík;1
-flee;uprchnout;1
 violate law;porušit zákon;1
 subject to;podléhající, vystavený čemu;1
 uniformed police officers;uniformovaní policisté;1
-maintain;provádět, držet;1
-respond;reagovat, odpovídat;1
 investigate a burglary;vyšetřovat vloupání;1
 accident victim;oběť nehody;1
 assign to;přidělit k;1
 urban;městský;1
 be involved in;být zapojen do, angažovaný v, zúčastněný v;1
-community policing;výkon policejní činnosti v úzké spolupráci s místním obyvatelstvem;1
 first aid;první pomoc;1
 paperwork;administrativa;1
-enforce the law;prosazovat zákon;1
 deputy sheriff;zástupce šerifa;1
 sworn officer;policista pod přísahou;1
 court;soud;1
 bailiff;soudní zřízenec;1
 provide security;zajišťovat bezpečnost;1
-perform;vykonávat;1
 elect;volit;1
 trooper;policista;1
-arrest;zatknout, zajistit;1
-issue;vydat, vystavit;1
 citation;předvolání, obsílka;1
 call for;vyzvat žádat;1
-determine;určit, stanovit;1
 render assistance;poskytnout pomoc;1
 emergency equipment;vybavení pro případ nouze, záchranné zařízení;1
 motor vehicle laws;pravidla silničního provozu;1
-gather facts;shromažďovat fakta;1
-collect evidence;získávat, shromažďovat důkazy;1
-combat;bojovat;1
-conduct;provádět, vést;1
+gather facts;shromažďovat fakta, zjišťovat skutečnosti, získávat fakta;1
 examine;zkoumat, přezkoumat, přešetřit;1
 observe;sledovat;1
 raid;razie, zátah;1
-fraud;podvod;1
 homicide;vražda, zabití;1
 plainclothes;civilní oblečení;1
-task force;zvláštní jednotka;1
-enforce law;prosazovat právo ;1
 testify;vypovídat, ústně svědčit;1
 prevent crime;předcházet páchání trestné činnosti;1
 file report;vyplňovat hlášení;1
 work on foot;hlídkovat, vykonávat pochůzky;1
-equipment;vybavení;1
 injury;zranění;1
 death;úmrtí;1
-overtime;práce přesčas;1
+overtime;práce přesčas, přesčas;1
 sick leave;nemocenská;1
 medical insurance;zdravotní pojištění;1
 life insurance;životní pojištění;1
 challenging;náročný, podnětný, představující výzvu;1
-protection of life and property;chránit život a majetek;1
 law enforcement officers;policisté, příslušníci bezpečnostních složek;1
 perform duties;vykonávat službu, plnit povinnosti;1
 exercise authority;uplatňovat pravomoc;1
 on duty;ve službě;1
 off duty;mimo službu;1
 pursue;stíhat, sledovat;1
-apprehend;zatknout;1
-break the law;porušit zákon;1
-issue;vydat, vystavit;1
-citation;předvolání, obsílka;1
 warning;varování;1
 write a report;vypracovat úřední záznamy, sepsat úřední záznam;1
 maintain records;uchovávat záznamy;1
 patrol;hlídkovat;1
 investigate;vyšetřovat;1
 suspicious activity;podezřelá činnost;1
-gather facts;zjišťovat skutečnosti, získávat fakta;1
-collect evidence;shromažďovat důkazy;1
 occupational specialty;pracovní zařazení;1
 testify in courts;svědčit u soudů;1
 particular field;specifická oblast;1
@@ -361,30 +277,82 @@ harbor patrol;přístavní hlídka;1
 canine corps;psovodi;1
 special weapons and tactics team;jednotka užívající speciální zbraně a techniky, SWAT;1
 emergency response team;zásahová jednotka;1
-jail;vězení;1
 constantly alert;neustále ve stavu pohotovosti, neustále ve střehu;1
 appropriately;náležitě;1
-deal with;zvládnout, vypořádat se;1
-threaten;hrozit, ohrožovat;1
 to witness;být svědkem;1
 suffering;utrpení;1
 take a toll;vybrat si daň;1
 schedule;naplánovat, rozvrhnout;1
-overtime;přesčas;1
-common;obvyklý, běžný;1
 shift work;práce na směny;1
 around the clock;24 hodin denně;1
 junior officers;služebně mladší policisté;1
 armed;ozbrojený;1
-exercise;uplatňovat, vykonávat;1
 walk the beat;provádět pěší obchůzku;1
 principle;zásada;1
+law enforcement;policie, prosazování zákona, bezpečnostní složky, úřad šerifa, orgány činné v trestním řízení;1
+jurisdiction;jurisdikce, soudní pravomoci;1
+deputy;náměstek, zástupce;1
+forensic;forenzní, soudní;1
+supervise;dohlížet, kontrolovat, řídit, dozorovat;1
+fraud;podvod;1
+tax evasion;daňový únik;1
+money laundering;praní peněz;1
+trafficking;nedovolené obchodování, nezákonné obchodování;1
+juvenile delinquency;kriminalita mládeže, kriminalita mladistvých;1
+theft;krádež;1
+detain;zajistit, zadržet;1
+take into custody;vzít do vazby;1
+trespass;neoprávněné vniknutí, přečin, provinění;1
+road safety;bezpečnost silničního provozu;1
+detect;zjišťovat, odhalovat, dopadnout, vypátrat, objevit, zjistit;1
+perpetrator;pachatel;1
+search;hledat, pátrat, prohledávat, vykonat osobní prohlídku, pátrání;1
+cause;příčina, zapříčinit, způsobit;1
+premises;areál, komplex budov;1
+kidnapping;únos, únos osoby;1
+struggle;boj, bojovat, potyčka, zápas;1
+operate;provozovat, spravovat, pracovat, fungovat;1
+training;výcvik, školení, proškolení;1
+act;zákon, čin, jednání;1
+provide;poskytovat, zabezpečit, poskytnout, zajistit;1
+determine;stanovit, určit, rozhodnout;1
+obtain;získat, obdržet;1
+promote;povýšit, podporovat;1
+maintain;posílit, podpořit, provádět, držet, udržovat, vést;1
+tackle;zvládnout,  vypořádat se, potírat, bojovat;1
+summary offence;přestupek, trestný čin, který lze soudit sumárně, přestupek;1
+indictable offence;žalovatelný trestný čin, čin soudně trestný, závažný trestný čin;1
+defendant;obžalovaný;1
+charge with;obvinit, obžalovat;1
+witness;svědek;1
+evidence;důkaz, důkazy;1
+penalty;trest, pokuta;1
+Crown court;královský soud;1
+judge;soudce;1
+punishment;trest, potrestání;1
+prison sentence;trest odnětí svobody;1
+conviction;usvědčení, rozsudek, odsouzení;1
+sentence;druh trestu, soudit;1
+official;úředník, funkcionář;1
+investigation;vyšetřování;1
+commit a crime;spáchat trestný čin, dopustit se trestného činu;1
+deal with;řešit, zabývat se, zvládnout, vypořádat se, projednávat, jednat;1
+flee;uprchnout, utéci;1
+respond;reagovat, odpovídat, zasáhnout;1
+community policing;výkon policejní činnosti v úzké spolupráci s místním obyvatelstvem, výkon policejní činnosti obecní policie;1
+enforce the law;uplatňovat zákon, prosazovat zákon;1
+perform;vykonávat, provádět;1
+arrest;zatknout, zajistit, zatčení, zadržet,  zadržení;1
+collect evidence;získávat důkazy, shromažďovat důkazy,  sbírat důkazy;1
+equipment;vybavení, výstroj, výzbroj;1
+apprehend;zatknout, zadržet;1
+break the law;porušit zákon, porušovat zákon, nedodržovat zákon;1
+threaten;hrozit, ohrožovat, vyhrožovat;1
+common;obvyklý, běžný, společný;1
 cross-border;přeshraniční;2
 authorities;úřady;2
 to prevent;předejít, zabránit;2
 to combat;bojovat proti, potírat co;2
-aim to;usilovat o co;2
-facilitate;ulehčit, pomoci;2
 particular;jednotlivý, určitý;2
 the Universal Declaration of Human Right;Všeobecná deklarace lidských práv;2
 General Assembly;Valné shromáždění;2
@@ -394,10 +362,8 @@ relate to;vztahovat se k;2
 Executive Committee;Výkonný výbor;2
 committee;výbor, komise;2
 General Secretariat;Generální sekretariát;2
-operate;pracovat, fungovat;2
 Secretary General;Generální tajemník;2
 side-by-side;vedle sebe, společně;2
-official;úřední;2
 liaison office;styčný úřad;2
 National Central Bureau;Národní ústředna;2
 be staffed by;být personálně obsazen;2
@@ -408,29 +374,20 @@ fugitives;uprchlíci;2
 adviser;poradce;2
 to be appointed by sb.;být jmenován kým;2
 facilitating;usnadňující;2
-establish;ustanovit, zřídit;2
 charting;obsahující, popisující;2
 unsolved crimes;nevyřešené trestné činy;2
 convicted;odsouzený;2
-alleged;údajný;2
 rationale;logický důvod, princip;2
 international ties;mezinárodní vazby;2
-forbid;zakazovat;2
 overlap;překrývat, krýt se s něčím, zahrnovat;2
 terrorism;terorismus;2
-organized crime;organizovaný zločin;2
 war crimes;válečné zločiny;2
 illicit drug production;nezákonná výroba drog;2
 drug trafficking;nekalé obchodování s drogami;2
 weapons smuggling;pašování zbraní;2
 human trafficking;obchodování s lidmi;2
-money laundering;praní peněz;2
-child pornography;dětská pornografie;2
-white-collar crime;kriminalita bílých límečků, hospodářská trestná činnost;2
-computer crime;počítačová kriminalita;2
 intellectual property crime;zcizení duševního vlastnictví;2
 corruption;korupce;2
-maintain;udržovat, vést;2
 travel documents;cestovní doklady;2
 be alerted to;být varován, upozorněn na;2
 queries into;dotazy;2
@@ -456,7 +413,6 @@ criminal offences;trestné činy;2
 public entities;veřejné instituce;2
 potential threats;potenciální hrozby;2
 disguised weapons;skryté zbraně;2
-targets;cíle;2
 free movement of people;volný pohyb osob;2
 abolishment;zrušení;2
 border checks;hraniční kontroly;2
@@ -466,17 +422,12 @@ consequence;následek;2
 guideline;pravidlo, pokyn;2
 conclusions;závěry;2
 border security;bezpečnost na hranicích;2
-underlying;být zásadním prvkem;2
 set of effective tools;soubor efektivních nástrojů;2
-threats;hrozby;2
 external border;vnější hranice;2
-promote;podporovat;2
 tier;úroveň, vrstva;2
 custom control;celní kontrola;2
-surveillance;sledování ;2
 risk analysis;analýza rizik;2
 police authorities;policejní orgány;2
-common;společný;2
 enhance;posilovat;2
 community body;orgán společenství;2
 have legal personality;mít právní subjektivitu;2
@@ -487,17 +438,32 @@ establish the budget;připravit rozpočet;2
 verify;prověřit;2
 adopt;přijmout;2
 appoint;jmenovat;2
-deputy;zástupce;2
+deputy;náměstek, zástupce;2
+operate;provozovat, spravovat, pracovat, fungovat;2
+promote;povýšit, podporovat;2
+maintain;posílit, podpořit, provádět, držet, udržovat, vést;2
+official;úředník, funkcionář;2
+common;obvyklý, běžný, společný;2
+money laundering;praní peněz;2
+aim to;usilovat o;2
+facilitate;ulehčit, pomoci, usnadnit, zjednodušit;2
+establish;ustanovit, zřídit, založit, vybudovat;2
+alleged;údajný;2
+forbid;zakazovat, zakázat, nedovolit ;2
+organized crime;organizovaný zločin, mafie;2
+child pornography;dětská pornografie;2
+white-collar crime;kriminalita bílých límečků, hospodářská trestná činnost, trestná činnost páchaná úředníkem;2
+computer crime;počítačová kriminalita;2
+targets;cíle, cíl, objekt;2
+underlying;být zásadním prvkem, základní;2
+threats;hrozby, pohrůžky;2
+surveillance;sledování, dohled, dozor;2
 Criminal Police and Investigation Department;služba kriminální policie a vyšetřování;3
 Criminal Procedure Code;trestní řád;3
 State Prosecutor, Public Prosecutor;státní zástupce;3
-supervise;dozorovat;3
 observance;dodržování;3
 verification procedure;prověřování;3
 summary pre-trial proceedings;zkrácené přípravné trestní řízení;3
-suspicion;podezření;3
-suspect;podezřelý;3
-prosecution;trestní stíhání;3
 official report;usnesení;3
 commencing the act;zahájení trestního stíhání;3
 peremptory act;neodkladný úkon;3
@@ -513,20 +479,15 @@ sound recording;zvukový záznam;3
 dactyloscopic print;daktyloskopická stopa;3
 counsel;obhájce;3
 apprehension;zadržení;3
-apprehend;zadržet;3
-arrest;zatčení;3
 custody;vazba;3
-take into custody;vzít do vazby;3
 permanent residence;trvalé bydliště;3
 obstruct;mařit;3
 clarification;objasnění;3
 attempted offence;pokus trestného činu;3
 preventive custody;vazba předstižná;3
-secure;zajistit;3
 at large;na svobodě;3
 give rise;vyvolat;3
 justified concern;oprávněná obava;3
-reason;důvod;3
 obliged;povinen;3
 hear a person;vyslechnout;3
 hear a case;projednat;3
@@ -540,19 +501,15 @@ summon;předvolat;3
 bring;předvést;3
 produce a witness;předvést svědka;3
 on the motion;na návrh;3
-detect;dopadnout, vypátrat;3
 infringe;porušit právo, porušit zákon;3
 commit sb. to the court;předat soudu;3
 responsible for;zodpovědný za;3
 persist ;trvat;3
-collect evidence;shromažďovat důkazy;3
 charge sb. with;obvinit z;3
 submit;předložit;3
-file;spis;3
 recommendation;doporučení;3
 indictment;obžaloba, obžalovací spis;3
 quash an indictment;stáhnout obžalobu;3
-transfer;postoupit;3
 discontinue;přerušit;3
 cease;zastavit;3
 conditionally;podmíněně;3
@@ -561,7 +518,6 @@ out-of-court settlement;mimosoudní vyrovnání;3
 sham;předstíraný;3
 track;sledovat;3
 entail;sledovat;3
-surveillance;dohled, dozor;3
 inviolability;nedotknutelnost;3
 ascertain;zjistit;3
 undercover;tajný;3
@@ -579,19 +535,29 @@ conditional cessation of prosecution;podmíněné zastavení trestního stíhán
 regular remedy;řádný opravný prostředek;3
 complaint;stížnost;3
 complaint for breaching the law;stížnost pro porušení zákona;3
+supervise;dohlížet, kontrolovat, řídit, dozorovat;3
+take into custody;vzít do vazby;3
+apprehend;zatknout, zadržet;3
+detect;zjišťovat, odhalovat, dopadnout, vypátrat, objevit, zjistit;3
+arrest;zatknout, zajistit, zatčení, zadržet,  zadržení;3
+collect evidence;získávat důkazy, shromažďovat důkazy,  sbírat důkazy;3
+surveillance;sledování, dohled, dozor;3
+suspicion;podezření;3
+suspect;podezřelý, domnívat se, mít podezření;3
+prosecution;trestní stíhání, trestní řízení;3
+secure;zajistit, ochránit;3
+reason;důvod;3
+file;spis, podat žádost, podat stížnost, podat žalobu;3
+transfer;postoupit, přemístit, přesunout;3
 crime;trestný čin, zločin, kriminalita, trestná činnost;4
-commit a crime;spáchat trestný čin;4
 convict of a crime;odsoudit za trestný čin;4
 solve a crime;vyřešit trestný čin;4
 the scene of the crime;místo činu;4
 the crime scene;místo činu;4
 delinquency;delikvence, kriminalita, zločinnost;4
 juvenile;mladistvý;4
-juvenile delinquency;kriminalita mladistvých;4
 juvenile delinquent;mladistvý provinilec;4
-offence;přestupek, přečin, trestný čin, porušení norem trestního a správního práva;4
-offense;přestupek, přečin, trestný čin, porušení norem trestního a správního práva;4
-criminal offence;trestný čin;4
+offense;přestupek, přečin, trestný čin, pohoršení, urážka;4
 penal law;trestní právo;4
 law-breaking;porušení práva, zákona;4
 crime prevention;prevence kriminality;4
@@ -602,78 +568,60 @@ serious offence;závažný trestný čin;4
 seriousness;závažnost;4
 misdemeanor;přečin, méně závažný trestný čin;4
 felony;těžký zločin, závažný trestný čin;4
-jurisdiction;jurisdikce, soudní pravomoci;4
-punish;trestat;4
 severely;přísně;4
-murder;úkladná vražda;4
-rape;znásilnění;4
+murder;úkladná vražda, vražda, zavraždit;4
+rape;znásilnění, znásilnit;4
 arson;žhářství;4
 infraction;porušení, přestoupení, přestupek;4
 jaywalking;bezohledné přecházení ulice;4
 littering;odhazování odpadků;4
 distupbing the peace;narušování veřejného pořádku;4
-summary offence;trestný čin, který lze soudit sumárně, přestupek;4
-indictable offence;závažný trestný čin;4
 Magistrate's court;nižší soud s omezenou jurisdikcí zabývající se méně závažnými trestnými činy;4
 jury trial;soudní řízení za přítomnosti poroty;4
-penalty;trest;4
 impose;uložit, uvalit;4
 driving offence;porušení pravidel silničního provozu;4
 drunk and disorderly;opilost a výtržnictví;4
 common assault;fyzické napadení;4
-damage;škoda, újma, poškození;4
+damage;škoda, újma, poškození, ztráta;4
 tougher penalties;tvrdší, přísnější tresty;4
 be subject to;podléhat něčemu;4
-Crown Court;královský soud;4
-hearing;projednávání, slyšení;4
-deal with;zabývat se něčím, projednávat něco;4
-magistrate;úředník se soudní pravomocí;4
-defendant;obžalovaný;4
+hearing;projednávání, slyšení, výslech;4
+magistrate;úředník se soudní pravomocí, soudce nižšího soudu;4
 bail;kauce;4
-triable either way offences;trestné činy, které lze projednávat jak u nižšího, tak u vyššího soudu;4
-theft;krádež;4
+triable either way offences;trestné činy které lze projednávat jak u nižšího tak u vyššího soudu;4
 actual bodily harm;lehké ublížení na zdraví;4
 distinguish;rozlišit, rozeznávat;4
 devolve;postoupit;4
-trespass;přečin, provinění;4
 assault;napadení, přepadení, útok;4
-manslaughter;zabití člověka v afektu, zabití člověka z nedbalosti, neúmyslné zabití;4
+manslaughter;zabití člověka v afektu, zabití člověka z nedbalosti, neúmyslné zabití, zabití, usmrcení;4
 battery;ublížení na zdraví, fyzické napadení, použití násilí proti osobě;4
 extortion;vydírání, vymáhání, vynucování;4
-kidnapping;únos;4
 grievous bodily harm;těžké ublížení na zdraví;4
 robbery;loupež, vyloupení, oloupení;4
 harm;újma, ublížení, zranění;4
-force;násilí, síla;4
-abuse;zneužití;4
+force;násilí, síla, násilím něčeho dosáhnout, vynutit si vstup, vypáčit, vyrazit;4
 indecency;obscénonst, nemravnost;4
 property;majetek, vlastnictví, jmění;4
 blackmail;vydírání, vyděračství;4
-larceny;krádež, rozkrádání;4
+larceny;krádež, rozkrádání, odcizení, odcizení cizího majetku;4
 burglary;vloupání;4
 pickpocketing;kapesní krádeže;4
 embezzlement;zpronevěra, defraudace;4
-deception;podvod, klam, trik;4
 handling stolen goods;překupnictví kradeného zboží;4
-vandalism;záměrné pustošení, vandalismus;4
-public order;veřejný pořádek;4
+vandalism;záměrné pustošení, vandalismus, vandalství;4
 assaulting public official;napadení veřejného činitele;4
 abuse of public official powers;zneužití pravomoci veřejného činitele;4
 unlawful assembly;nedovolené shromažďování;4
 tax;daň;4
-tax evasion;daňový únik;4
 espionage;špionáž, vyděračství;4
 treason;vlastizrada, velezrada;4
 perverting the course of justice;maření soudního výkonu;4
 contempt of court;pohrdání soudem;4
 bribery;uplácení;4
 perjury;křivá přísaha;4
-white-collar crime;trestná činnost páchaná úředníkem, pracovníkem v administrativě, kriminalita bílých límečků;4
 punch;udeřit, dát ránu;4
-charge;obvinění, žaloba;4
 throw out;zamítnout;4
-fine;pokuta;4
-dismiss;zamítnout;4
+fine;pokuta, pokutovat;4
 fowl;drůbež;4
 livestock;hospodářské zvíře;4
 curb;omezit;4
@@ -682,26 +630,21 @@ hit-and-run;ujetí z místa nehody;4
 pedestrian;chodec;4
 weep;plakat;4
 petty crime, minor crime;méně závažná trestná činnost, drobná kriminalita;4
-murder;vražda, zavraždit;4
 murderer;vrah;4
 punishable;podléhající trestu, trestně stíhatelný;4
-prison sentence;trest odnětí svobody;4
 capital punishment, death penalty, death sentence;trest smrti;4
-execute;popravit;4
 premeditated intent;úmyslný záměr;4
 premeditated criminal act;úmyslný trestný čin;4
-manslaughter;zabití, usmrcení;4
 voluntary manslaughter;vražda, zabití;4
 involuntary manslaughter;nedbalostní zabití;4
 accidental;náhodný;4
 negligence, carelessness;nedbalost, nepozornost;4
 imply;předpokládat, obsahovat;4
 offender;pachatel, obviněný;4
-fail;selhat, neuspět;4
+fail;selhat, neuspět, zkrachovat;4
 caution;obezřetnost, opatrnost;4
 distract;rozptýlit, vyrušit, odvrátit pozornost;4
 loaded gun;nabitá zbraň;4
-penalty;trest;4
 killing in self-defense;zabití, usmrcení v sebeobraně;4
 prove;dokázat;4
 proof;důkaz;4
@@ -710,22 +653,18 @@ murder rate;nápad vražd;4
 murder weapon;vražedná zbraň;4
 serial murderer, killer;několikanásobný vrah;4
 mass murderer, killer;masový vrah;4
-assault;útok, napadení;4
 assailant;útočník, násilník;4
 report;oznámit, nahlásit;4
 law enforcement authorities;orgány činné v trestním řízení;4
 spouse;snoubenec, snoubenka, druh, družka, manžel, manželka;4
-abuse;zneužívání, týrání, zneužívat, týrat;4
 child abuse;zneužívání dítěte;4
 batterer;násilník;4
-battery;ublížení na zdraví;4
 humiliate;utiskovat, utlačovat, ponižovat;4
 humiliation;útisk, útlak;4
-physical abuse;týrání svěřené osoby;4
+physical abuse;týrání svěřené osoby, fyzické napadání;4
 psychical abuse;psychické týrání;4
 child neglect;zanedbání povinné výživy, zanedbání povinné výchovy;4
 sexual abuse;pohlavní zneužívání;4
-rape;znásilnění, znásilnit;4
 rapist;pachatel znásilnění;4
 incest;incest;4
 molestation;sexuální nátlak;4
@@ -735,36 +674,27 @@ domestic abuse;týrání svěřené osoby;4
 domestic violence;domácí násilí;4
 make up;tvořit, skládat se, přestavovat;4
 report to;oznámit;4
-victim;poškozený;4
 suffer from;trpět, strádat;4
 abuse physically;dopouštět se fyzického násilí;4
 violence;násilí;4
-violent;násilný;4
 swear at;používat hrubé výrazy;4
 cruelly;zvláště trýznivým způsobem;4
 cruel;zvláště trýznivý;4
 cruelty;mučivé útrapy;4
-torture;mučení, týrání;4
+torture;mučení, týrání, mučit;4
 solicitor;advokát, právník nižšího soudu;4
-deal with;zabývat se, jednat;4
 to be ashamed;být zahanben;4
 seek advice;hledat radu, žádat o radu, žádat o pomoc;4
-rape;znásilnění, znásilnit;4
 date rape;znásilnění mezi partnery;4
-kidnapping;únos osoby;4
 hijacking;únos;4
 carjacking;únos auta;4
-abuse;zneužití, zneužívat;4
-search;pátrání, pátrat, hledat;4
 rescue;osvobodit, zachránit;4
 sexual assault;sexuální útok, napadení;4
-torture;mučení, mučit;4
 captivity;zbavení osobní svobody, omezování osobní svobody;4
 attempt to escape;pokus o útěk, pokusit se o útěk;4
 Stockholm syndrome;stockholmský syndrom;4
 consecutive;nepřetržitý, po sobě jdoucí;4
 abduct;unést;4
-abduction;únos;4
 abductor;únosce;4
 remain in custody;být vězněn, být zbaven osobní svobody;4
 escape;útěk, utéct, uprchnout;4
@@ -779,10 +709,10 @@ hate groups;extremisté, extremistické skupiny;4
 launch;zahájit, spustit;4
 wave;vlna;4
 bias-related crime;trestná činnost související s předsudky či předpojatostí;4
-concern;znepokojení;4
+concern;znepokojení, zajímat se;4
 prominent;významný, hlavní;4
 policymaker;zákonodárce;4
-phenomenon;jev;4
+phenomenon;jev, fenomén;4
 Romans;Římané;4
 Christians;křesťané;4
 Ottoman;vládce tureckého impéria;4
@@ -800,7 +730,6 @@ racial biases;předsudky z rasistických pohnutek;4
 religious biases;předsudky z náboženských pohnutek;4
 inspire;vnuknout nápad, inspirovat;4
 Native Americans;indiáni;4
-targets;cíl, objekt;4
 intimidation and violence;útlak a násilí;4
 drive from;odvést z, vyvést z;4
 predominantly;převážně;4
@@ -813,31 +742,20 @@ verbal taunts;verbální narážky, posměch;4
 verbal abuse;verbální napadání;4
 smashed windows;rozbitá okna;4
 vandalized cars;zničené, poškozené automobily;4
-arson;žhářství;4
-threats;pohrůžky;4
-physical abuse;fyzické napadání;4
 inflict;způsobit;4
 because of;kvůli, z důvodu, vzhledem k;4
 Criminal Code;trestní zákon;4
 racist;rasistický, rasista;4
 aggravating circumstance;přitěžující okolnost;4
-judge;soudce;4
-require;vyžadovat, požadovat;4
 take into account;vzít do úvahy, vzít v potaz, přihlédnout k čemu;4
-sentence;soudit;4
-act;čin, jednání;4
-crime;trestný čin;4
 section;paragraf;4
-punish;potrestat, trestat;4
 violence against a group of inhabitants;násilí proti skupině obyvatel;4
 violence against individuals;násilí proti jednotlivci;4
 on the basis;na základě;4
-race;rasa;4
-nationality;národnost;4
+nationality;národnost, státní příslušník;4
 political conviction or religion;politické přesvědčení či víra;4
 threaten the safety;ohrozit bezpečnost;4
 welfare;sociální jistota;4
-victim;poškozený;4
 incalculable;nevyčíslitelný, nezměrný;4
 tear;rozpolcení, rozpolcenost;4
 at the very fabric of free society;v samé podstatě svobodné společnosti;4
@@ -850,20 +768,15 @@ approve of;považovat za správné;4
 belief;víra, přesvědčení;4
 commit criminal acts;dopustit se trestných čin, páchat trestné činy;4
 on account of;s ohledem na, vzhledem k;4
-recognize;rozlišovat;4
-public order;veřejný pořádek;4
-cause;zapříčinit, způsobit;4
 go beyond;přesahovat rámec;4
-offence;pohoršení, urážka;4
 hostility;nepřátelství, zášť, odpor;4
 creed;přesvědčení, vyznání, víra;4
 political affiliation;politická příslušnost;4
 offensive;urážlivý, útočný;4
 dispute;spor, hádka;4
 hang around, hang round;nečinně postávat, potloukat se kolem;4
-unfounded complaints;neopodstatněné stížnosti;4 
+unfounded complaints;neopodstatněné stížnosti;4
 malicious complaints;zlomyslné stížnosti;4
-abuse;urážka, nadávka;4
 insult;urážka;4
 leaflets and posters;letáky a plakáty;4
 dumping of rubbish;vysypávání odpadků;4
@@ -885,28 +798,21 @@ probation officer;probační úředník;4
 home confinement;domácí vězení;4
 tag;elektronicky monitorovat pomocí čipu;4
 tagging;elektronické monitorování pomocí čipu;4
-fine;pokuta, pokutovat;4
 community service;veřejně prospěšné práce;4
-magistrate;soudce nižšího soudu;4
-imprisonment;trest odnětí svobody;4
 overcrowded;přeplněný;4
 remission;prominutí trestu, zmírnění trestu;4
-life imprisonment;trest odnětí svobody na doživotí;4
+life imprisonment;trest odnětí svobody na doživotí, doživotí;4
 parole;podmíněné propuštění, dočasné propuštění;4
 death penalty, death sentence, capital punishment;trest smrti;4
 execution;poprava;4
-execute;popravit;4
 retribution;odplata;4
 incapacitation;zbavení způsobilosti k právním úkonům;4
 capital crimes, capital offences;trestné činy za něž je možné uložit trest smrti;4
-deter;odstrašit, odradit;4
-deterrent;odstrašující prostředek;4
-prosecutor;státní zástupce;4
+deter;odstrašit, odradit, zabránit;4
+deterrent;odstrašující prostředek, odrazující;4
 plea bargaining;přiznání viny v některých bodech obžaloby;4
 convict, convicted;odsoudit, odsouzený;4
-conviction;odsouzení;4
 felon;těžký zločinec;4
-felony;těžký zločin;4
 vary by jurisdiction;lišit se podle jurisdikce;4
 supersede;nahradit, odstranit;4
 eventually overturned;nakonec změněny;4
@@ -916,20 +822,13 @@ overturn the sentence;změnit rozsudek;4
 acquit;zprostit viny;4
 retry;obnovit proces;4
 resentence to death;potvrdit trest smrti;4
-life imprisonment;doživotí;4
 abolitionist;země které zrušily trest smrti;4
-abolish;zrušit;4
 ultimate denial of human rights;absolutní popření lidských práv;4
 premeditated killing;úkladná vražda;4
 cold-blooded killing;chladnokrevná vražda;4
 crimes against property;trestné činy proti majetku;4
-theft;krádež;4
-burglary;vloupání;4
-larceny;odcizení, krádež;4
 motor vehicle theft;krádež motorového vozidla;4
-arson;žhářství;4
 shoplifting;krádež v obchodě;4
-vandalism;vandalství;4
 financial gain;finanční zisk;4
 thievery;krádež, zlodějství;4
 theft of cash;krádež peněz;4
@@ -942,46 +841,29 @@ jewelry;šperky, klenoty;4
 worth;mající hodnotu;4
 cash;hotovost;4
 goods;zboží;4
-hearing;výslech;4
-plead guilty;přiznat vinu;4
-nationality;státní příslušník;4
 alias;falešné jméno, přezdívka;4
 trick;podvést, klamat;4
 pass himself off;vydávat se;4
-elude;vyhnout se;4
 sophisticated;rafinovaný;4
 underhand;podvodný, lstivý;4
 pretend;předstírat;4
 guest;host;4
 thereafter;potom, pak;4
-gain;získat;4
+gain;získat, zisk;4
 access;přístup;4
 substantial;značný;4
 value;hodnota, cena;4
-deception;podvod;4
 forge;padělat;4
 take into consideration;vzít v úvahu;4
-premises;budova;4
 intent;úmysl;4
-felony;závažný trestný čin;4
-larceny;odcizení cizího majetku;4
 therein;zde, v tomto ohledu;4
-property;majetek;4
-investigation;vyšetřování;4
-witness;svědek;4
 collection;shromažďování;4
-evidence;důkaz, důkazy;4
 crucial;rozhodující, klíčový;4
 attempt;pokusit se, pokus;4
-respond;reagovat;4
-occur;přihodit se, stát se;4
-flee;uprchnou, utéci;4
 scene;místo události;4
 be aware of;být si vědom čeho;4
 alert;ostražitý, ve stavu pohotovosti;4
 length;podrobně, do detailu;4
-secure;zajistit, ochránit;4
-handle;manipulovat, zacházet s něčím;4
 undisturbed;neporušený;4
 portion;část;4
 traffic;provoz, ruch;4
@@ -989,37 +871,28 @@ location;vypátrání, nalezení;4
 item;položka, věc;4
 disturb;porušit;4
 rule;pravidlo, zásada;4
-gain;získat;4
 entry;vstup;4
-determine;určit, stanovit, rozhodnout;4
 kick;kopnout;4
-check;kontrolovat, zkontrolovat;4
 signs;známky, stopy;4
-force;násilím něčeho dosáhnout, vynutit si vstup, vypáčit, vyrazit;4
 forced entry;násilný vstup;4
 route;cesta, trasa;4
 enter;vstoupit, vstup;4
-underlying;základní;4
 scientifically;vědecky;4
 validate;potvrdit, ověřit;4
 consider;považovat;4
-reliable;spolehlivý;4
 accessible;dostupný;4
 genetics;genetika;4
 contour;linie, obrys, tvar;4
 ridge;vyvýšenina, hřbet;4
 whorl;rýha;4
 unique;jedinečný;4
-seriously;vážně;4
 doubt;pochybovat;4
 assumption;předpoklad;4
 rest on;spočívat na;4
 friction;tření;4
 swirl;kroužit;4
 fingertip;špička prstu;4
-on file;v databázi;4
 variety;velký počet, mnoho;4
-reason;důvod;4
 tool;nástroj;4
 toolmark;stopa způsobená nástrojem;4
 pry;páčit, páčidlo;4
@@ -1035,30 +908,19 @@ screwdriver;šroubovák;4
 tip;špička;4
 prompt;napovědět;4
 crime spree;série trestných činů;4
-arrest;zadržení;4
 spate;řada, série;4
-burglary;vloupání;4
 electrical equipment;elektronika;4
 question;vyslýchat;4
-suspicion;podezření;4
-break in;vloupání;4
+break in;vloupání, porouchat se;4
 steal;dopouštět se krádeže, odcizit;4
 tamper;manipulovat, poškodit;4
-crash;rozbít, havarovat;4
-crackdown;policejní zásah, policejní zákrok;4
 involve;zahrnovat, účastnit se;4
-detect;objevit, zjistit;4
-insurance;pojištění;4
-speeding;překročení povolené rychlosti;4
-seize;zabavit;4
 lead;vést, řídit;4
 enforce;vynutit si, prosadit;4
-opportunist;příležitostný;4
+opportunist;příležitostný, prospěchář;4
 preventable;vyhnutelný;4
 precaution;obezřetnost, opatření;4
-alarm;poplašné zařízení;4
 immobilizer;zařízení zabraňující neoprávněné osobě v odjezdu s vozidlem, imobilizér;4
-deterrent;odrazující;4
 cost;náklady, cena;4
 steering wheel clamp;zámek volantu;4
 obvious;očividný;4
@@ -1070,11 +932,8 @@ additional;doplňkový;4
 fitting;instalování, instalace;4
 upgrading;vylepšení, inovace;4
 steering wheel;volant;4
-turning;otáčení;4
 windscreen;čelní sklo;4
 toughened safety glass;tvrzené sklo, bezpečnostní sklo;4
-safety;bezpečnostní;4
-strike;udeřit, narazit;4
 fragment;úlomek, střep;4
 smooth;hladký;4
 side window;boční okénko;4
@@ -1091,21 +950,14 @@ smash and grab;rychlé rozbití skla a rychlé uskutečnění krádeže vozidla,
 transporter key;klíč se zabudovaným čipem;4
 embed;pevně zasadit, zapustit;4
 ignition;zapalování;4
-break in;porouchat se;4
 engine;motor;4
-supply;dodat, vybavit;4
 remote control;dálkový ovladač;4
-counterfeit;padělat;4
-seizure;zabavení;4
+counterfeit;padělat, padělaný, nepravý, falešný;4
 fake goods;padělané zboží;4
 warehouse;skladiště;4
-evidence;důkaz;4
 counterfeiting;padělání;4
 paramilitaries;ozbrojenci;4
 corner;ovládnout;4
-crackdown;zásah, zákrok;4
-impact;dopad, účinek;4
-struggle;boj, bojovat;4
 advance;pokrok;4
 province;obor, pole působnosti;4
 reach;dosáhnout, dostat se;4
@@ -1122,36 +974,24 @@ hugely;obrovsky, obrovský, ohromný;4
 varying;rozličný, proměnlivý;4
 degree;stupeň;4
 jersey;dres;4
-available;k dispozici;4
-seizure;zabavení;4
 vast;obrovský, ohromný;4
 garments;oděvy;4
 garment;kus oděvu nebo prádla;4
 bear the name;opatřit značkou, opatřit logem;4
-concern;zajímat se;4
 profit;zisk;4
 manufacture;výroba;4
 stall-front selling;stánkový prodej;4
 bogus;padělaný, nepravý, falešný;4
 temptation;pokušení;4
-tackle;bojovat proti, potírat co;4
 involvement;zapojení se čeho, angažování se v čem;4
 objective;cíl, operační cíl, úkol, plán;4
-prosecution;trestní řízení;4
-fine;pokutovat;4
 judiciary;justice;4
-economic crime;hospodářská trestná činnost;4
-white-collar crime;trestná činnost bílých límečků, hospodářská trestná činnost;4
-fraud;podvod;4
-commit;spáchat;4
+economic crime;hospodářská trestná činnost, hospodářská kriminalita;4
 a person of respectability;respektovaná osoba, společností vážená osoba;4
-opportunist;prospěchář;4
 take advantage of;využít něčeho, těžit z;4
 circumstance;okolnost;4
-financial gain;finanční zisk;4
 bankruptcy fraud;podvody spojené s vyhlašováním konkurzu;4
 insider trading;zneužívání informací v obchodník styku;4
-embezzlement;zpronevěra, defraudace;4
 public corruption;korupce veřejných činitelů;4
 indentity theft;krádež identity;4
 environmental crime;trestné činy proti životnímu prostředí;4
@@ -1166,16 +1006,13 @@ unwillingness;neochota;4
 catch out;přistihnout;4
 hamper;bránit, překážet;4
 financial fraud;finanční podvody;4
-impact;dopad;4
 corporate dishonesty;firemní nepoctivost;4
 misconduct;neprofesionální chování, řízení;4
 credibility;důvěryhodnost;4
 confidence;důvěra;4
 reputation;pověst, renomé;4
 fraud within corporations;podvody pracovníků uvnitř firmy;4
-fail;zkrachovat;4
 reluctant;neochotný;4
-tackle;vypořádat se;4
 corporate fraud;firemní podvody;4
 legislative tool;legislativní nástroj;4
 resources;zdroje, prostředky;4
@@ -1187,16 +1024,13 @@ health care fraud;podvody v poskytování zdravotní péče;4
 mortgage fraud;hypoteční podvody;4
 insurance fraud;pojišťovací podvody;4
 mass marketing fraud;spotřebitelské podvody pomocí médií;4
-money laundering;praní peněz;4
 threat;hrozba;4
 underestimate;podcenit;4
 included on the agenda;zahrnutý do pořadu jednání;4
 susceptible to;náchylný k;4
 spot;rozeznat, zjistit;4
-economic crime;hospodářská kriminalita;4
-claim;žádost, požadavek;4
 vetting;prověřování;4
-pattern;model, schéma;4
+pattern;model, schéma, předloha, původní e-mail;4
 wherein;kde, v kterém;4
 proceeds;zisk;4
 entrust;svěřit;4
@@ -1204,20 +1038,17 @@ appropriate;přivlastnit si;4
 overbilling;fakturování vyšší částky;4
 purport;zamýšlet;4
 worthless;bezcenný;4
-counterfeit;padělaný, nepravý, falešný;4
 defraud;oklamat, ošidit;4
 under the guise;pod rouškou;4
 artificially inflate the price;uměle vyhnat cenu nahoru;4
 merchandise;zboží;4
-engage in;zabývat se, praktikovat;4
 shoulder surfing;získání údajů pozorováním, získání údajů koukáním přes rameno;4
 credit card;úvěrová karta;4
 dumpster diving;získání něčích údajů z vyhozených dokumentů;4
 bank  statement;výpis z účtu;4
 utility bills;účty za služby poskytované domácnostem;4
 record;záznam;4
-assume;přijmout, vzít na sebe;4
-account;bankovní účet;4
+account;bankovní účet, účet;4
 identity data;identifikační údaje;4
 password;heslo;4
 unsolicited;nevyžádaný;4
@@ -1226,26 +1057,18 @@ applications for;žádost o;4
 loan;půjčka;4
 withdrawal;výběr peněz z účtu;4
 unauthorized;neoprávněný;4
-damage;ztráta;4
-finding;poznatek;4
+finding;poznatek, zjištění;4
 identity theft;krádež identity, zcizení identity, zneužití identity, poškozování cizích práv;4
-deception;podvod, podvodný trik, podvod s totožností;4
-gain;zisk;4
 misuse;zneužití;4
 Internet crime;internetová kriminalita;4
-computer crime;počítačová kriminalita;4
 commit crime;páchat trestnou činnost;4
-commit a crime;spáchat trestný čin;4
 embrace;zahrnovat;4
 phishing;metody zahrnující odcizení a následné zneužití digitální identity uživatele;4
 credit card frauds;podvody s kreditními kartami;4
 bank robbery;bankovní loupež;4
 illegal downloading;nelegální stahování dat z internetu;4
 industrial espionage;průmyslová špionáž;4
-child pornography;dětská pornografie;4
 kidnapping children via chat rooms;únos dětí prostřednictvím chatů;4
-facilitate;usnadnit, zjednodušit;4
-perpetrator;pachatel;4
 perpetrate crime;páchat trestnou činnost;4
 diverse;různý, zločinný;4
 superhighway;velmi rychlý způsob;4
@@ -1258,38 +1081,116 @@ ingenuity;vynalézavost, důvtipnost;4
 installing;instalace;4
 fraudulent emails;podvodné e-maily;4
 deposit;uložit, vklad;4
-account;účet;4
 personal account;osobní účet;4
-criminal;pachatel trestného činu;4
 statistics;statistika;4
-obtain;obdržet;4
 mention;zmínit;4
 paragraph;odstavec;4
 survey;přehled;4
-security;bezpečnost;4
 suffer;trpět, utrpět;4
-fraud;podvod;4
 billion;miliarda;4
-finding;zjištění;4
-misuse;zneužití;4
 uphill battle;obtížný boj;4
-counterfeit;padělat;4
-abuse;zneužití;4
-act;čin, zákon;4
 track down;vystopovat;4
-investigation;vyšetřování;4
-deter;zabránit;4
 crime registry;registr trestné činnosti;4
 rarely;zřídka;4
 hack another computer;proniknout do jiného počítače;4
 eluding technique;technika pomocí které se pachatel vyhne prozrazení;4
 phishing emails;falešné kopie původních e-mailů;4
-pattern;předloha, původní e-mail;4
 suspicious;podezřelý;4
 credible;důvěryhodný, věrohodný, spolehlivý;4
 unique password;vlastní heslo které zná pouze uživatel, unikátní heslo, jedinečné heslo;4
 run anti-virus software;spustit antivirový program;4
 anti-spyware software;program pro zabezpečení počítače proti proniknutí;4
+jurisdiction;jurisdikce, soudní pravomoci;4
+tax evasion;daňový únik;4
+juvenile delinquency;kriminalita mládeže, kriminalita mladistvých;4
+theft;krádež;4
+trespass;neoprávněné vniknutí, přečin, provinění;4
+perpetrator;pachatel;4
+search;hledat, pátrat, prohledávat, vykonat osobní prohlídku, pátrání;4
+cause;příčina, zapříčinit, způsobit;4
+kidnapping;únos, únos osoby;4
+act;zákon, čin, jednání;4
+obtain;získat, obdržet;4
+summary offence;přestupek, trestný čin, který lze soudit sumárně, přestupek;4
+indictable offence;žalovatelný trestný čin, čin soudně trestný, závažný trestný čin;4
+defendant;obžalovaný;4
+witness;svědek;4
+penalty;trest, pokuta;4
+Crown court;královský soud;4
+judge;soudce;4
+prison sentence;trest odnětí svobody;4
+conviction;usvědčení, rozsudek, odsouzení;4
+sentence;druh trestu, soudit;4
+investigation;vyšetřování;4
+deal with;řešit, zabývat se, zvládnout, vypořádat se, projednávat, jednat;4
+flee;uprchnout, utéci;4
+fraud;podvod;4
+evidence;důkaz, důkazy;4
+struggle;boj, bojovat, potyčka, zápas;4
+respond;reagovat, odpovídat, zasáhnout;4
+premises;areál, komplex budov;4
+determine;stanovit, určit, rozhodnout;4
+tackle;zvládnout,  vypořádat se, potírat, bojovat;4
+commit a crime;spáchat trestný čin, dopustit se trestného činu;4
+money laundering;praní peněz;4
+detect;zjišťovat, odhalovat, dopadnout, vypátrat, objevit, zjistit;4
+arrest;zatknout, zajistit, zatčení, zadržet,  zadržení;4
+white-collar crime;kriminalita bílých límečků, hospodářská trestná činnost, trestná činnost páchaná úředníkem;4
+facilitate;ulehčit, pomoci, usnadnit, zjednodušit;4
+child pornography;dětská pornografie;4
+computer crime;počítačová kriminalita;4
+targets;cíle, cíl, objekt;4
+underlying;být zásadním prvkem, základní;4
+threats;hrozby, pohrůžky;4
+suspicion;podezření;4
+prosecution;trestní stíhání, trestní řízení;4
+secure;zajistit, ochránit;4
+reason;důvod;4
+offence;přestupek, přečin, trestný čin, pohoršení, urážka;4
+criminal offence;trestný čin;4
+punish;trestat, potrestat;4
+abuse;zneužití, zneužívání, týrání, zneužívat, týrat, urážka, nadávka;4
+deception;podvod, klam, trik, podvodný trik, podvod s totožností;4
+public order;veřejný pořádek;4
+charge;obvinění, žaloba, obvinění;4
+dismiss;zamítnout, vyloučit;4
+execute;popravit;4
+victim;poškozený, oběť;4
+violent;násilný, prudký, náhlý, intenzivní;4
+abduction;únos;4
+require;vyžadovat, požadovat;4
+race;rasa;4
+recognize;rozlišovat, rozpoznat;4
+imprisonment;trest odnětí svobody, uvěznění, vězení;4
+prosecutor;státní zástupce, žalobce;4
+abolish;zrušit;4
+plead guilty;přiznat vinu;4
+elude;vyhnout se, uniknout;4
+occur;přihodit se, stát se, dojít k čemu;4
+handle;manipulovat, zacházet, vykonávat, vyřizovat, mít na starosti, řešit;4
+check;kontrolovat, zkontrolovat;4
+reliable;spolehlivý, věrohodný, hodnověrný;4
+seriously;vážně, vážným způsobem;4
+on file;v databázi, zaregistrovaný ve spisech, evidovaný ve spisech;4
+crash;rozbít, havarovat, autonehoda, srážka, havárie;4
+crackdown;policejní zásah, policejní zákrok, zásah, zákrok, tvrdý zákrok;4
+insurance;pojištění;4
+speeding;překročení povolené rychlosti, nedovolená rychlost;4
+seize;zabavit;4
+alarm;poplašné zařízení, znepokojení, obavy, strach, poplach;4
+turning;otáčení, odbočování;4
+safety;bezpečnostní, bezpečnost;4
+strike;udeřit, narazit, útok;4
+supply;dodat, vybavit, zásobovat, dodávat, opatřit;4
+seizure;zabavení;4
+impact;dopad, účinek, náraz;4
+available;k dispozici, dostupný, dosažitelný;4
+commit;spáchat, provést, dopustit se, páchat;4
+claim;žádost, požadavek, tvrzení, přihlásit se k odpovědnosti za;4
+engage in;zabývat se, praktikovat, angažovat se v;4
+assume;přijmout, vzít na sebe, nabýt;4
+criminal;pachatel trestného činu;4
+security;bezpečnost;4
 drugs;léky, drogy;5
 peers;vrstevníci;5
 prescription drugs;léky na předpis;5
@@ -1318,25 +1219,19 @@ dependency;závislost;5
 be addressed through;být řešen čím;5
 treatment;terapie, léčba;5
 tempt fate;pokoušet osud;5
-claim;tvrzení;5
 safe;bezpečný;5
 e-dealer;prodejce na internetu;5
 skunk;druh marihuany;5
 sweep off the market;vytlačit z trhu;5
-available;dostupný;5
 enforce laws;prosazovat zákony;5
-supply;zásobovat, dodávat, opatřit;5
-possession;držení, přechovávání;5
+possession;držení, přechovávání, vlastnění;5
 cannabis farms;pěstírny marihuany;5
 to run;provozovat, vést;5
 aggravating;přitěžující;5
 production;výroba, produkce;5
-trafficking;nezákonné obchodování;5
 maximum penalty;maximální trest;5
-imprisonment;uvěznění;5
 reprimand;úřední důtka, pokárání;5
 final warning;napomenutí s výstrahou;5
-charge;obvinění;5
 be referred to;být předán;5
 rehabilitation programme;program nápravy, znovuzařazení;5
 issue a warning;vydat varování;5
@@ -1377,7 +1272,6 @@ overdose;předávkovat se;5
 doses;dávky;5
 to arrest;zadržet;5
 serious charge;závažné obvinění;5
-law enforcement;orgány činné v trestním řízení;5
 ingredient;přísada, složka, příměs;5
 addiction potential;náchylnost k závislosti;5
 lethal drug;smrticí droga, látka;5
@@ -1390,16 +1284,14 @@ carport;otevřená garáž, přístřešek pro auto;5
 suspected gunman;podezřelý střelec;5
 drug-related;mít spojitost s drogami;5
 alleged hit men;údajní nájemní vrazi;5
-crackdown;tvrdý zákrok;5
 robbery attempt;pokus loupeže;5
 was in charge of;byl zodpovědný za;5
-handle;zde vykonávat;5
 broad range;velká škála;5
 guarding;ochrana, hlídání;5
 law enforcement duties;povinnosti policie, úkoly policie;5
 dispatch;dislokovat;5
 army troops;armádní jednotky;5
-smuggling;pašování;5
+smuggling;pašování, napomáhání nedovolenému překročení státní hranice, převaděčství;5
 hot spots;problematické oblasti;5
 recent;nedávný;5
 target at;zaměřit se na;5
@@ -1408,15 +1300,11 @@ criminal justice expert;odborník na trestní právo;5
 carried out;provedené;5
 trafficking in persons, trafficking in human beings;obchodování s lidmi;5
 recruitment;nábor osob;5
-transfer;přemístit, přesunout;5
 harbouring;ukrývání, přechovávání;5
 harbour;skrývat, přechovávat;5
 receipt of persons;převzetí osob a jejich následné přechovávání;5
 by means of the threat;pod pohrůžkou;5
 coercion;donucení, nátlak;5
-abduction;únos;5
-fraud;podvod;5
-deception;podvod, trik;5
 abuse of power;zneužití pravomoci;5
 vulnerability;bezmocnost, bezbrannost;5
 giving or receiving of payments or benefits;poskytování či přijímání plateb či výhod;5
@@ -1427,12 +1315,10 @@ slavery;otroctví;5
 servitude;otroctví, nevolnictví;5
 removal of organs;odebrání orgánů;5
 suppress;utlačovat, omezovat;5
-punish;potrestat;5
 supplement;doplnit, dodat;5
 supplements;dodatek;5
 global issue;globální problém, celosvětový problém;5
 systematic research;systematické pátrání;5
-reliable;věrohodný, spolehlivý;5
 data on;údaje o;5
 comparative analysis;srovnávací analýza;5
 countermeasures;protiopatření;5
@@ -1442,23 +1328,17 @@ criminal justice;trestní soudnictví;5
 response to;reakce na, reagování na;5
 legislative reform;právní reforma;5
 raise awareness;posilovat uvědomování si čeho;5
-training;školení, proškolení;5
 support and protection;pomoc a ochrana;5
 give evidence;poskytnout důkaz, poskytnout důkazy;5
 prosecuting;trestní stíhání;5
 behind the phenomenon;v pozadí fenoménu, v pozadí jevu;5
-victim;poškozený, oběť;5
 consent;souhlasit, svolit;5
 initial stage;počáteční fáze, stádium;5
 be misled;být oklamán;5
 be deceived;být podveden;5
 traffickers;obchodnici s lidmi;5
-prosecution;trestní stíhání;5
-evidence;důkaz, důkazy;5
 establish the true nature;ustanovit skutečný charakter;5
-available;dosažitelný, k dispozici, dostupný;5
 constitutional protection;ústavní ochrana;5
-require;požadovat, vyžadovat;5
 be accused of;být obviněn z ;5
 raise the possibility of consent;zvýšit šanci na získání souhlasu;5
 defence;obrana;5
@@ -1470,9 +1350,7 @@ subsequent;následný;5
 exploitation;vykořisťování;5
 irrelevant;nepodstatný, bezvýznamný, irelevantní;5
 valid consent;platný souhlas;5
-regardless;bez ohledu na;5
-smuggling;napomáhání nedovolenému překročení státní hranice, převaděčství, pašování;5
-smuggle;převádět, pašovat;5
+smuggle;převádět, pašovat, tajně dopravovat;5
 migrant;přistěhovalec, migrant;5
 respect;souvislost, zřetel;5
 resemble;být podobný, podobat se;5
@@ -1489,10 +1367,8 @@ ongoing exploitation;pokračující vykořisťování;5
 generate;vytvářet;5
 illicit profits;nezákonné zisky;5
 re-victimization;reviktimizace;5
-abuse;zneužívání;5
 transnational;nadnárodní;5
 within;v rámci, uvnitř;5
-unlawful;nezákonný, nelegitimní;5
 intimidate;zastrašit;5
 coerce;přinutit, donutit;5
 segment;část;5
@@ -1512,24 +1388,18 @@ small-scale;malý rozsah;5
 far-right;ultrapravicový;5
 lone wolf;vlk samotář;5
 disseminate;roztrušovat, šířit;5
-carry out;provádět, uskutečňovat;5
 launch a campaign;zahájit kampaň, spustit kampaň;5
-convict of;uznat vinným z;5
+convict of;uznat vinným z, odsoudit za;5
 sentence to;odsoudit k;5
-execute;popravit;5
 post Cold-War period;období po Studené válce;5
 lethal injection;smrticí injekce;5
-assume;nabýt;5
 guerilla group;gerilová skupina, polovojenská skupina;5
 unrestricted;neomezený;5
-tactics;taktika;5
 weapon;zbraň;5
 former;bývalý;5
 access to;přístup k;5
 dual use technology;využití duálních technologií;5
 high explosives;výbušniny, trhaviny;5
-religion;náboženství;5
-establish;zřídit, založit, vybudovat;5
 clandestine;tajný;5
 trade in arms;obchod se zbraněmi;5
 agents;látky;5
@@ -1537,15 +1407,10 @@ hire;najímat;5
 training camps;výcvikové tábory;5
 cyber warfare;elektronická válka, kyberválka;5
 spectacular;okázalý, pompézní;5
-target;cil;5
 involvement in;zapojení do;5
-organized crime;organizovaný zločin, mafie;5
 turning point;bod obratu;5
 act of terrorism;teroristický čin;5
-commit;provést;5
 take control of;převzít kontrolu nad;5
-elude;vyhnout se, uniknout;5
-smuggle;pašovat, tajně dopravovat;5
 airport security;letištní;5
 turn off;vypnout;5
 transponder;radiový odpovídač;5
@@ -1558,7 +1423,6 @@ stab;bodnout;5
 wreckage;trosky;5
 be trapped;být uvězněn;5
 on the spot;ihned, na místě;5
-impact;náraz;5
 intense flames;mohutný oheň, mohutné plameny;5
 implode;zhroutit se;5
 aboard;na palubě;5
@@ -1567,62 +1431,92 @@ brandish;ohrožovat, mávat;5
 switchblade;vystřelovací nůž;5
 airborne;ve vzduchu;5
 rush;vtrhnout;5
-wound;zranit;5
 take over;převzít, ujmout se;5
 split;rozdělit;5
 broken English;lámaná angličtina;5
 cell phone;mobilní telefon;5
 learn of;dozvědět se;5
-respond;reagovat, zasáhnout;5
-struggle;potyčka, zápas;5
 gain control;získat kontrolu, ovládnout;5
 cash nose-first;zřítit se střemhlav;5
 rush hour;špička;5
-strike;útok;5
 dummy run;cvičná zkouška, zkouška na nečisto;5
 security measures;bezpečnostní opatření;5
 X-ray screening;rentgenová kontrola;5
 uncover;odhalit;5
-prosecutor;žalobce;5
-charge with;obvinit, obžalovat;5
 attempted;pokus o;5
 extend detention;prodloužit vazbu;5
 isolation cell;izolovaná cela, samotka;5
 new evidence;nové důkazy;5
 unidentified;nezjištěný;5
-plead guilty;přiznat vinu;5
-possession;držení, vlastnění;5
 attorney;právní zástupce;5
 appeal;odvolat se;5
 hold in custody;držet ve vazbě;5
 devout;oddaný, zbožný;5
-engage in;angažovat se v, praktikovat;5
 violent act;násilný čin;5
 involve in;zaplést se do, dostat se do;5
 criminal activities;trestná činnost;5
 enforcer;vymahač;5
-convict of;odsoudit za;5
 unregistered firearm;neregistrovaná zbraň;5
 brawling;rvačka;5
 serve;odpykat si, odsedět si;5
 befriend;spřátelit se;5
-threaten;ohrožovat, vyhrožovat;5
-alleged;údajný;5
 plot;komplot, spiknutí ;5
 launch an intensive investigation;vyvolat intenzivní vyšetřování, začít intenzivní vyšetřování, mít za následek intenzivní vyšetřování;5
-dismiss;vyloučit;5
 poor performance;slabé výsledky;5
-investigator;vyšetřovatel;5
 large-scale;velkých rozměrů;5
 cap;završit;5
 slit throat;podříznout krk;5
-file;podat žádost, podat stížnost, podat žalobu;5
-on file;zaregistrovaný ve spisech, evidovaný ve spisech;5
 extradition;vydání stíhané osoby;5
+law enforcement;policie, prosazování zákona, bezpečnostní složky, úřad šerifa, orgány činné v trestním řízení;5
+trafficking;nedovolené obchodování, nezákonné obchodování;5
+charge with;obvinit, obžalovat;5
+threaten;hrozit, ohrožovat, vyhrožovat;5
+training;výcvik, školení, proškolení;5
+fraud;podvod;5
+evidence;důkaz, důkazy;5
+struggle;boj, bojovat, potyčka, zápas;5
+respond;reagovat, odpovídat, zasáhnout;5
+establish;ustanovit, zřídit, založit, vybudovat;5
+alleged;údajný;5
+organized crime;organizovaný zločin, mafie;5
+file;spis, podat žádost, podat stížnost, podat žalobu;5
+transfer;postoupit, přemístit, přesunout;5
+prosecution;trestní stíhání, trestní řízení;5
+punish;trestat, potrestat;5
+abuse;zneužití, zneužívání, týrání, zneužívat, týrat, urážka, nadávka;5
+deception;podvod, klam, trik, podvodný trik, podvod s totožností;5
+charge;obvinění, žaloba, obvinění;5
+dismiss;zamítnout, vyloučit;5
+execute;popravit;5
+victim;poškozený, oběť;5
+abduction;únos;5
+require;vyžadovat, požadovat;5
+imprisonment;trest odnětí svobody, uvěznění, vězení;5
+prosecutor;státní zástupce, žalobce;5
+plead guilty;přiznat vinu;5
+elude;vyhnout se, uniknout;5
+handle;manipulovat, zacházet, vykonávat, vyřizovat, mít na starosti, řešit;5
+reliable;spolehlivý, věrohodný, hodnověrný;5
+on file;v databázi, zaregistrovaný ve spisech, evidovaný ve spisech;5
+crackdown;policejní zásah, policejní zákrok, zásah, zákrok, tvrdý zákrok;5
+strike;udeřit, narazit, útok;5
+supply;dodat, vybavit, zásobovat, dodávat, opatřit;5
+impact;dopad, účinek, náraz;5
+available;k dispozici, dostupný, dosažitelný;5
+commit;spáchat, provést, dopustit se, páchat;5
+claim;žádost, požadavek, tvrzení, přihlásit se k odpovědnosti za;5
+engage in;zabývat se, praktikovat, angažovat se v;5
+assume;přijmout, vzít na sebe, nabýt;5
+regardless;bez ohledu na;5
+unlawful;nezákonný, nelegitimní, protiprávní;5
+carry out;provádět, uskutečňovat, uskutečnit, provést;5
+tactics;taktika;5
+religion;náboženství, náboženské vyznání;5
+target;cíl, vybrat si za terč, zamířit na, terč;5
+wound;zranit, zranění;5
+investigator;vyšetřovatel;5
 crime against public order;trestná činnost páchaná v souvislosti s narušováním veřejného pořádku;6
-public order;veřejný pořádek;6
 public order protection;ochrana veřejného pořádku;6
-security;bezpečnost;6
 entitle;mít právo, dát právo, být oprávněn;6
 exert their constitutional rights;uplatnit své ústavou zaručené právo;6
 in a public place;na veřejně přístupném místě, na veřejném prostranství;6
@@ -1632,7 +1526,6 @@ include;zahrnovat;6
 move about;pohybovat se;6
 be disturbed;být rušen, být vyrušován;6
 disturbing the peace;narušování veřejného pořádku, rušení veřejného pořádku, výtržnictví;6
-forbid;zakázat, nedovolit ;6
 behave in a threatening manner;chovat se způsobem ohrožujícím okolí;6
 carry dangerous objects;mít u sebe nebezpečné předměty;6
 carry dangerous substances;mít u sebe nebezpečné látky;6
@@ -1643,11 +1536,9 @@ urgent calls, distress call, emergency call;tísňové volání;6
 provide advice;poskytovat informace, rady;6
 provide directions;dávat pokyny;6
 intervene in;zasahovat do;6
-unlawful;protiprávní, nezákonný;6
 working with;ve spolupráci s;6
 local residents;místní obyvatelé;6
 public authorities;úřady;6
-aim to;usilovat o;6
 prevent;zabránit, předcházet;6
 crimes;trestné činy;6
 commit, perpetrate;spáchat, dopustit se;6
@@ -1656,15 +1547,12 @@ perpetration of a crime;dopouštění se trestného činu;6
 cooperation;spolupráce v oblasti bezpečnosti;6
 coordinate;koordinovat, uvést v soulad, sjednotit ;6
 through local security plans;prostřednictvím plánů týkajících se bezpečnosti v konkrétním místě;6
-community policing;výkon policejní činnosti obecní policie;6
 focuse on problem-solving; zaměřovat se na řešení problému;6
 public places;veřejně přístupná místa, veřejná místa;6
 designate for public use;vyhradit pro širokou veřejnost;6
 in reality;ve skutečnosti;6
-regardless;bez ohledu na;6
 ownership;vlastnictví;6
 cemetery;hřbitov;6
-premises;komplex budov, areál;6
 domestic premises;budovy sloužící k ryze soukromým účelům;6
 residential premises;komplexy obytných budov;6
 under the Penal Code;dle trestního zákona;6
@@ -1681,7 +1569,6 @@ military;armáda, ozbrojené síly;6
 forces;jednotky;6
 control;mít pod kontrolou;6
 disperse;rozptýlit, rozehnat;6
-arrest;zadržet, zatknout;6
 civilians;civilní osoby, civilisté;6
 be involved in a demonstration;angažovat se v demonstracích, účastnit se demonstrací;6
 be involved in a protest;angažovat se v protestech, účastnit se protestů;6
@@ -1700,19 +1587,16 @@ water cannon;vodní dělo;6
 armoured vehicle;obrněné vozidlo;6
 mounted police;jízdní policie;6
 officer;policista;6
-perform;vykonávat, provádět;6
 wear protective equipment;mít na sobě ochrannou výstroj, nosit ochrannou výzbroj;6
 riot helmet;ochranná přilba, ochranná helma;6
 body armour;neprůstřelná vesta;6
 gas mask;plynová maska;6
 riot shield;ochranný štít;6
-equipment;výstroj, výzbroj;6
 be designed to;být určen k, loužit k;6
 protect a wearer;chránit nositele;6
 melee;tlačenice, rvačka;6
 hurled object;předmět letící vzduchem, vzduchem létající předmět;6
 hurl;mrštit, hodit;6
-provide;poskytnout, zabezpečit, zajistit;6
 protective equipment;ochranná výstroj, ochranná výzbroj;6
 ballistic protection;ochrana před střelnými zbraněmi, balistická ochrana;6
 agent;chemická látka;6
@@ -1728,9 +1612,7 @@ means of retention;prostředky sloužící k ochraně zbraně před použitím n
 retention;zadržování, zadržení, retenze;6
 trade-off;kompromis;6
 in an emergency;v naléhavém případě;6
-tactics;taktika;6
 tactics and strategy;taktika a strategie;6
-determine;určit, stanovit;6
 offensive equipment;útočná výzbroj, útočné zbraně;6
 less-lethal weaponry;nesmrticí výzbroj;6
 lethal weaponry;smrticí výzbroj;6
@@ -1742,7 +1624,6 @@ illegal;nezákonný;6
 in the most extreme circumstances;za mimořádných okolností;6
 major;větší, závažnější;6
 unrest;nepokoj, protest;6
-armoured vehicle;obrněné vozidlo;6
 initial subduing with firepower;prvotní potlačení nepokoje za pomoci palebné síly;6
 deploy;dislokovat, rozmístit;6
 vulnerable;zranitelný, bezbranný;6
@@ -1756,7 +1637,6 @@ subdue rioters;potlačit, uklidnit výtržníky;6
 subsequently;následně;6
 aggressive step;agresivní krok, agresivní opatření;6
 might and height;síla a výška;6
-training;výcvik;6
 infiltrate a crowd;infiltrovat dav, proniknout do davu;6
 front-facing a riot;první řada policistů čelících davu;6
 walk in a line parallel;jít v jedné řadě, kráčet v jedné řadě;6
@@ -1766,21 +1646,16 @@ Greek;řecký, Řek;6
 Greece;Řecko;6
 riot unit;zásahová jednotka;6
 shoot;střelit, postřelit;6
-target;vybrat si za terč, zamířit na, terč;6
 gunman;ozbrojenec, ozbrojený muž;6
 Athens;Atény;6
-seriously;vážně, vážným způsobem;6
-wound;zranit, zranění;6
 escalation of violence;eskalace násilí, vystupňování násilí;6
 fatal police shooting;střelba ze strany policie se smrtelnými následky;6
-spark;rozpoutat, vyvolat;6
+spark;rozpoutat, vyvolat, podnítit;6
 riots;nepokoje, výtržnosti, pouliční bouře;6
 in decades;v průběhu desetiletí, za uplynulých několik desítek let;6
 pre-dawn attack;útok těsně před svítáním;6
-aimed at;zacílit na, zaměřit na;6
 riot police unit;jednotka pořádkové policie;6
 stationed;rozmístěný, dislokovaný;6
-add;dodat, uvést navíc;6
 treat for;léčit se;6
 gunshot wound;střelné zranění;6
 undergo surgery;podstoupit chirurgický zákrok, podrobit se chirurgickému zákroku;6
@@ -1795,33 +1670,52 @@ be injured;být zraněn;6
 in the shooting;v přestřelce, při přestřelce;6
 protester;účastník protestu, protestující osoba, odpůrce čeho;6
 throw gasoline bombs;házet zápalné pumy;6
-spark;podnítit, vyvolat;6
 volatile;rychle se měnící, nestálý;6
 favoured by radicals;oblíbený radikály;6
 patrol cars;hlídkový služební vůz;6
 block access;zablokovat přístup;6
-forensic;forenzní, soudní;6
-investigator;vyšetřovatel;6
-collect evidence;sbírat důkazy, shromažďovat důkazy;6
 site;místo události;6
-remain;zůstat, přetrvávat;6
 cordon off;uzavřít policejním kordonem;6
 police statement;prohlášení policie, policejní prohlášení;6
-detain;zadržet;6
 search for suspects;pátrání po podezřelých;6
-occur;dojít k čemu, přihodit se, stát se ;6
 claim of responsibility for the shooting;přihlášení se k odpovědnosti za útok;6
 anonymous caller;anonym, anonymní volající;6
 on behalf of;jménem;6
 previously;předtím, dosud;6
 public prosecutor;státní zástupce;6
-handle;vyřizovat, mít na starosti, řešit;6
 terrorism offense;teroristický trestný čin;6
 head the investigation;vést vyšetřování, řídit vyšetřování;6
-reliable;spolehlivý, hodnověrný;6
-carry out;uskutečnit, provést;6
 bombing;pumový, bombový útok;6
-claim;přihlásit se k odpovědnosti za;6
+forensic;forenzní, soudní;6
+detain;zajistit, zadržet;6
+community policing;výkon policejní činnosti v úzké spolupráci s místním obyvatelstvem, výkon policejní činnosti obecní policie;6
+perform;vykonávat, provádět;6
+equipment;vybavení, výstroj, výzbroj;6
+provide;poskytovat, zabezpečit, poskytnout, zajistit;6
+collect evidence;získávat důkazy, shromažďovat důkazy,  sbírat důkazy;6
+premises;areál, komplex budov;6
+determine;stanovit, určit, rozhodnout;6
+training;výcvik, školení, proškolení;6
+arrest;zatknout, zajistit, zatčení, zadržet,  zadržení;6
+aim to;usilovat o;6
+forbid;zakazovat, zakázat, nedovolit ;6
+public order;veřejný pořádek;6
+occur;přihodit se, stát se, dojít k čemu;6
+seriously;vážně, vážným způsobem;6
+security;bezpečnost;6
+handle;manipulovat, zacházet, vykonávat, vyřizovat, mít na starosti, řešit;6
+reliable;spolehlivý, věrohodný, hodnověrný;6
+claim;žádost, požadavek, tvrzení, přihlásit se k odpovědnosti za;6
+regardless;bez ohledu na;6
+unlawful;nezákonný, nelegitimní, protiprávní;6
+carry out;provádět, uskutečňovat, uskutečnit, provést;6
+tactics;taktika;6
+target;cíl, vybrat si za terč, zamířit na, terč;6
+wound;zranit, zranění;6
+investigator;vyšetřovatel;6
+aimed at;zacílit na, zaměřit na, zacílený na, zaměřený na;6
+add;dodat, uvést navíc,  doplnit, přidat;6
+remain;zůstat, přetrvávat, zůstávat;6
 traffic operational command unit;odbor služby dopravní policie, opravní inspektorát;7
 Metropolitan Police Service Traffic Patrols;dopravní služba Metropolitní policie;7
 Motor Traffic Patrols;motorizované dopravní hlídky;7
@@ -1831,11 +1725,9 @@ set up;zřídit, vytvořit, ustanovit;7
 passing;schválení zákona, přijetí zákona;7
 to pass;přijmout, schválit;7
 Road Traffic Act;zákon o provozu na pozemních komunikacích, zákon o silničním provozu;7
-establish;zřídit, ustanovit;7
 the Highway Code;zákon o silničním provozu;7
 pedestrian crossings;přechody pro chodce;7
 set;stanovit, určit;7
-abolish;zrušit;7
 the then speed limit;v tehdejší době nejvyšší povolená rychlost;7
 the then Prime Minister;tehdejší premiér;7
 in anticipation of;pro případ;7
@@ -1844,7 +1736,6 @@ increased speed;zvýšená nepovolená rychlost;7
 introduce;zavést;7
 Motor Patrols;motorizované silniční hlídky;7
 oversee;dohlížet, kontrolovat;7
-break the law;porušovat zákon, nedodržovat zákon;7
 forerunner;předchůdce;7
 Traffic Unit;odbor služby dopravní policie, dopravní inspektorát;7
 operated from;fungovat v rámci, provádět akce z, operovat z;7
@@ -1858,7 +1749,6 @@ assist in the free circulation of traffic;napomáhat plynulosti silniční dopra
 enforce traffic law;uplatňovat zákon o provozu na pozemních komunikacích, uplatňovat zákon o silničním provozu;7
 ultimately;nakonec;7
 rather than;spíše než;7
-punishment;trest, potrestání;7
 approach;postoj, přístup, snaha;7
 earn;vysloužit si, přinést, získat;7
 nickname;přezdívka, přezdívat;7
@@ -1873,17 +1763,12 @@ supported;za asistence, podporovaný;7
 support;pomáhat, podporovat;7
 police staff;policisté a občanští zaměstnanci policie;7
 ethos;mravní základ, charakter;7
-remain;zůstat, zůstávat;7
-road safety;bezpečnost silničního provozu;7
 commit to;angažovat se, zavázat se, být zainteresovaný;7
 reducing;snížení, omezení;7
 reduce;snížit, omezit;7
 injury, injuries;zranění;7
 deny;zabránit, zamezit, zamítnout, odepřít, odpírat, popřít, zapřít;7
-criminal;pachatel trestného činu;7
-enforce the law;uplatňovat zákon, prosazovat zákon;7
 road casualties;oběti silniční nehodovosti;7
-tackle;potírat, bojovat;7
 threat of terrorism;hrozba terorismu;7
 anti-social;protispolečenský;7
 enhance public confidence and reassurance;posílit důvěru veřejnosti a uklidnit veřejnost;7
@@ -1894,20 +1779,14 @@ such as;jako například;7
 antisocial and criminal use of vehicles;užívání motorových vozidel pro účely protispolečenského či kriminálního charakteru;7
 drink and drug driving;řízení pod vlivem alkoholu;7
 drug driving;řízení pod vlivem drog, řízení pod vlivem návykových látek;7
-speeding;překročení povolené rychlosti, nedovolená rychlost;7
-seize;zabavit;7
-seizure;zabavení;7
 uninsured vehicle;nepojištěné vozidlo;7
 unlicensed vehicle;vozidlo neschválené pro silniční provoz;7
-safety;bezpečnost;7
 commercial vehicles;vozidla určená k podnikání;7
 transportation of hazardous materials;přeprava nebezpečných materiálů;7
 road safety at schools;bezpečenost silničního provozu v okolí škol;7
 detect wanted criminals;zjistit hledané pachatele;7
 traffic officers, traffic wardens;dopravní policisté;7
 un-roadworthy and dangerous vehicles;nebezpečná a k provozu nezpůsobilá vozidla;7
-commit;dopustit se, páchat;7
-offence;trestný čin;7
 part of routine traffic stops;součást běžné dopravní kontroly;7
 highly;na vysoké úrovni;7
 skilled;odborně vyškolený;7
@@ -1921,7 +1800,6 @@ dangerous drivers and vehicles;řidiči a vozidla jedoucí zvláště nebezpečn
 offer extensive road safety advice to drivers and pedestrians;podávat informace řidičům a chodcům které se týkají bezpečnosti silničního provozu;7
 road traffic;provoz na pozemních komunikacích, silniční doprava;7
 have powers;mít pravomoc, disponovat pravomocemi;7
-aimed at;zacílený na, zaměřený na;7
 keep drivers safe on the roads;zajistit bezpečnost řidičů na pozemních komunikacích;7
 keep pedestrians safe on the roads;zajistit bezpečnost chodců na pozemních komunikacích;7
 overview;přehled;7
@@ -1930,7 +1808,6 @@ be pulled over by the police;být zastaven policií;7
 have the power to stop anyone at any time;mít pravomoc zastavit kohokoliv a kdykoliv;7
 give a reason;uvést důvod;7
 failing to stop;neuposlechnutí pokynu k zastavení;7
-criminal offence;trestný čin;7
 produce documents;předložit doklady;7
 driving licence;řidičský průkaz;7
 insurance certificate;doklad o pojištění vozidla;7
@@ -1952,7 +1829,6 @@ one-off fine;pokuta v zákonem stanovené výši;7
 non-endorsable offence;dopravní přestupky nepodléhající záznamu do registru;7
 incur a fine of;udělit pokutu ve výši;7
 fines for endorsable offences;pokuty za dopravní přestupky podléhající záznamu do registru, trestné činy podléhající záznamu do registru;7
-speeding;překročení povolené rychlosti;7
 more serious offences;závažnější dopravní přestupky, dopravní přestupky závažnějšího charakteru;7
 driving withhout insurance;jízda vozidlem bez povinného ručení;7
 have the power;mít pravomoc, disponovat pravomocí;7
@@ -1974,14 +1850,11 @@ be issued with a receipt;vystavit potvrzení, vydat potvrzení;7
 breath test;dechová zkouška;7
 breath alcohol tester;alkohol tester;7
 breathalyse;provést dechovou zkoušku na alkohol nebo jiné návykové látky;7
-suspect;domnívat se, mít podezření;7
 erratic;nevyrovnaný, vzbuzující určité podezření;7
 valid;platný;7
 sample;vzorek;7
-prosecution;trestní stíhání;7
 be based;být založen, zakládat se;7
 be charged;být obviněn;7
-evidence;důkaz, důkazy;7
 store;uložit, uchovat;7
 be sober;být střízlivý;7
 permission;svolení, povolení;7
@@ -1993,12 +1866,10 @@ get 12 points;dostat 12 bodů;7
 as a result;jako důsledek;7
 endorsable offence;dopravní přestupek podléhající záznamu, dopravní trestný čin podléhající záznamu;7
 revoke;vymazat, anulovat;7
-road offence;dopravní přestupek;7
 vehicle seizure;zabavení vozidla;7
 have the power to seize;mít pravomoc zabavit, disponovat pravomocí zabavit;7
 anti-social manner;chování obtěžující okolí, způsobem obtěžující okolí;7
 causing;zapříčiňující;7
-alarm;znepokojení, obavy, strach, poplach;7
 harrasment;obtěžování;7
 distress;nesnáz, obtíže;7
 inconsiderate driving;bezohledná jízda;7
@@ -2006,9 +1877,6 @@ unauthorised;neoprávněný;7
 off-road driving;jízda v terénu;7
 off-road vehicles;terénní vozidla;7
 appropriate licence;příslušné oprávnění;7
-insurance;pojištění;7
-arrest;zadržení;7
-imprisonment;uvěznění, vězení;7
 dangerous driving;riskantní jízda, nebezpečná jízda;7
 right-hand driving;jízda vpravo;7
 be towed;být odtažen;7
@@ -2031,12 +1899,10 @@ leave a notice;zanechat záznam o provedeném úkonu ze strany policie;7
 carry something illegal;mít u sebe něco nezákonného;7
 such as a weapon;jako např. zbraň;7
 police believe;policie se domnívá;7
-commit a crime;dopustit se trestného činu;7
 be arrested;být zadržen;7
 details;podrobné informace, vyčerpávající informace, detaily, podrobnosti;7
 be recorded;být zaznamenán;7
 for monitoring purposes;za účelem monitorování;7
-provide;poskytnout;7
 unless;pokud ne, ledaže;7
 be reported for an offence;oznámit že došlo k trestnému činu;7
 fill out a form;vyplnit formulář ;7
@@ -2046,10 +1912,8 @@ give a copy;poskytnout kopii;7
 be held on file against somebody;být veden v policejních záznamech;7
 be charged with an offence;být obviněn z trestného činu;7
 complain about;stěžovat si na;7
-race;rasa;7
 gender;pohlaví;7
 disability;nezpůsobilost, handicap;7
-religion;náboženské vyznání;7
 commit a crime in the past;dopustit se trestného činu v minulosti, spáchat trestný čin v minulosti;7
 be stopped and searched unreasonably;být zastaven a prohledán bez uvedení řádného důvodu;7
 treat fairly;zacházet slušným způsobem, zacházet ohleduplně;7
@@ -2072,7 +1936,6 @@ sleet;déšť se sněhem, plískanice, břečka;7
 otherwise;jinak;7
 poor road surfaces;nevyhovující stav cesty, nevyhovující stav pozemní komunikace;7
 stopping distance;brzdná dráha;7
-add;doplnit, dodat, přidat;7
 worn tires;ojeté pneumatiky, opotřebované pneumatiky;7
 brakes;brzdy;7
 poor driving skills;malé zkušenosti s řízením vozidel;7
@@ -2083,7 +1946,6 @@ decrease;snížit;7
 ability;schopnost;7
 control the vehicle;ovládat vozidlo;7
 under emergency stopping;v případě náhlého zastavení;7
-turning;odbočování;7
 replace;vyměnit, nahradit;7
 windshield wiper;stěrač;7
 windshield;čelní sklo;7
@@ -2096,11 +1958,9 @@ locate and activate the washer;zapnout ostřikovače;7
 be familiar with;být obeznámen s;7
 location and operation;umístění a fungování;7
 wear a seatbelt;používat bezpečnostní pás;7
-violent;prudký, náhlý, intenzivní;7
 maneuver;řízení, manévrování;7
 do an excellent job;odvést znamenitý výkon;7
 recognizing a hazard;rozpoznání nebezpečí;7
-recognize;rozpoznat;7
 appear in front of somebody;objevit se před někým;7
 realize;uvědomit si;7
 abrupt turn to the left;náhlé odbočení doleva;7
@@ -2108,7 +1968,6 @@ throw;hodit, mrštit;7
 the passenger side of the vehicle;sedadlo pro spolujezdce;7
 tailgate;držet se v těsném závěsu za jiným vozidlem, nedodržovat bezpečnou vzdálenost;7
 intersection;křižovatka;7
-crash;autonehoda, srážka, havárie;7
 stay away from;držet se dále od;7
 18-wheelers;americký truck;7
 make a right turn;odbočit doprava;7
@@ -2131,7 +1990,6 @@ slow abruptly;prudce zabrzdit;7
 tire remnants;zbytky pneumatik;7
 scattered;rozptýlený;7
 blind spot;mrtvý úhel;7
-check;zkontrolovat, kontrolovat;7
 make a lane change;přejet do jiného jízdního pruhu, změnit jízdní pruh;7
 mirror;zrcátko, zrcadlo;7
 turn around;otočit se;7
@@ -2143,3 +2001,37 @@ fender bender;malá dopravní nehoda;7
 fender;blatník;7
 wing;blatník;7
 bend;ohnout, ohýbat;7
+road safety;bezpečnost silničního provozu;7
+punishment;trest, potrestání;7
+enforce the law;uplatňovat zákon, prosazovat zákon;7
+break the law;porušit zákon, porušovat zákon, nedodržovat zákon;7
+tackle;zvládnout,  vypořádat se, potírat, bojovat;7
+commit a crime;spáchat trestný čin, dopustit se trestného činu;7
+provide;poskytovat, zabezpečit, poskytnout, zajistit;7
+evidence;důkaz, důkazy;7
+arrest;zatknout, zajistit, zatčení, zadržet,  zadržení;7
+establish;ustanovit, zřídit, založit, vybudovat;7
+suspect;podezřelý, domnívat se, mít podezření;7
+prosecution;trestní stíhání, trestní řízení;7
+offence;přestupek, přečin, trestný čin, pohoršení, urážka;7
+criminal offence;trestný čin;7
+violent;násilný, prudký, náhlý, intenzivní;7
+race;rasa;7
+recognize;rozlišovat, rozpoznat;7
+abolish;zrušit;7
+check;kontrolovat, zkontrolovat;7
+crash;rozbít, havarovat, autonehoda, srážka, havárie;7
+insurance;pojištění;7
+speeding;překročení povolené rychlosti, nedovolená rychlost;7
+seize;zabavit;7
+alarm;poplašné zařízení, znepokojení, obavy, strach, poplach;7
+turning;otáčení, odbočování;7
+safety;bezpečnostní, bezpečnost;7
+seizure;zabavení;7
+criminal;pachatel trestného činu;7
+imprisonment;trest odnětí svobody, uvěznění, vězení;7
+commit;spáchat, provést, dopustit se, páchat;7
+religion;náboženství, náboženské vyznání;7
+aimed at;zacílit na, zaměřit na, zacílený na, zaměřený na;7
+add;dodat, uvést navíc,  doplnit, přidat;7
+remain;zůstat, přetrvávat, zůstávat;7
