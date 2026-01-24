@@ -189,24 +189,22 @@
             color: var(--muted)
         }
 
-        /* Lekce – vertikální seznam kvůli dlouhým názvům */
         .checklist {
             display: flex;
             flex-direction: column;
             gap: .4rem
         }
 
-            .checklist label {
-                display: flex;
-                gap: .6rem;
-                align-items: flex-start
-            }
+        .checklist label {
+            display: flex;
+            gap: .6rem;
+            align-items: flex-start
+        }
 
-            .checklist input {
-                margin-top: .15rem
-            }
+        .checklist input {
+            margin-top: .15rem
+        }
 
-        /* Dlaždice */
         .pairgrid {
             display: grid;
             gap: .8rem
@@ -235,80 +233,74 @@
             text-align: center
         }
 
-        /* Pravá karta = dva překryvné panely */
         #answerCard {
             position: relative;
             display: block;
             min-height: 180px;
         }
 
-            #answerCard .pane {
-                position: absolute;
-                inset: 0;
-            }
+        #answerCard .pane {
+            position: absolute;
+            inset: 0;
+        }
 
-        /* Psací panel: 2 sloupce – vlevo input, vpravo akce */
         #paneWrite {
             display: grid;
-            grid-template-columns: 1fr auto; /* <- dřív byly řádky, teď 2 sloupce */
-            align-items: center; /* srovná vertikálně na střed */
+            grid-template-columns: 1fr auto;
+            align-items: center;
             gap: .8rem;
         }
 
-            /* textbox zůstává vycentrovaný uvnitř své oblasti */
-            #paneWrite .write-center {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: .5rem;
-            }
-
-            #paneWrite textarea {
-                background: transparent;
-                border: none;
-                outline: none;
-                width: 100%;
-                max-width: 700px;
-                font-size: 1.4rem;
-                line-height: 1.5;
-                text-align: center;
-                color: var(--text);
-                resize: none;
-                overflow-y: auto;
-                white-space: pre-wrap;
-                word-break: break-word;
-            }
-
-            /* sloupec tlačítek vpravo, svisle uprostřed */
-            #paneWrite .write-actions {
-                display: flex;
-                flex-direction: column;
-                gap: .5rem;
-                align-items: flex-end; /* tlačítka zarovnaná k pravému okraji sloupce */
-                justify-content: center; /* svisle doprostřed k textboxu */
-                justify-self: end; /* připlácne celý sloupec ke krajní pravé hraně */
-                padding: .5rem 0;
-            }
-
-                #paneWrite .write-actions .btn {
-                    width: fit-content;
-                }
-
-        /* Na úzkých mobilech je lepší tlačítka odsadit pod input */
-        @media (max-width: 700px) {
-            #paneWrite {
-                grid-template-columns: 1fr; /* jeden sloupec */
-                grid-template-rows: auto auto; /* a akce půjdou pod input */
-            }
-
-                #paneWrite .write-actions {
-                    align-items: center;
-                    justify-content: flex-start;
-                    padding: .5rem;
-                }
+        #paneWrite .write-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .5rem;
         }
 
-        /* Kartičky – velká vycentrovaná dlaždice */
+        #paneWrite textarea {
+            background: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+            max-width: 700px;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            text-align: center;
+            color: var(--text);
+            resize: none;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        #paneWrite .write-actions {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            align-items: flex-end;
+            justify-content: center;
+            justify-self: end;
+            padding: .5rem 0;
+        }
+
+        #paneWrite .write-actions .btn {
+            width: fit-content;
+        }
+
+        @media (max-width: 700px) {
+            #paneWrite {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+            }
+
+            #paneWrite .write-actions {
+                align-items: center;
+                justify-content: flex-start;
+                padding: .5rem;
+            }
+        }
+
         #paneFlash {
             display: flex;
             align-items: center;
@@ -329,10 +321,10 @@
             user-select: none;
         }
 
-            .flashcard .hint {
-                font-weight: 600;
-                opacity: .85
-            }
+        .flashcard .hint {
+            font-weight: 600;
+            opacity: .85
+        }
     </style>
 </head>
 <body>
@@ -399,7 +391,6 @@
                 </div>
             </div>
 
-            <!-- samostatný panel s lekcemi -->
             <div class="card" id="lessonsPanel">
                 <h2>Lekce</h2>
                 <div class="checklist" id="lessonsBox" aria-label="Výběr lekcí"></div>
@@ -420,7 +411,6 @@
                 </div>
 
                 <div class="innercard" id="answerCard">
-                    <!-- PANE: psaní -->
                     <div class="pane" id="paneWrite">
                         <div class="write-center">
                             <textarea id="answer" rows="1" placeholder="Sem napiš odpověď…" disabled></textarea>
@@ -432,7 +422,6 @@
                         </div>
                     </div>
 
-                    <!-- PANE: kartičky -->
                     <div class="pane" id="paneFlash" hidden>
                         <div class="flashcard" id="flashcard" title="Klikni pro zobrazení / další">
                             <span class="hint">Ukázat →</span>
@@ -455,15 +444,15 @@
         const KEY_STATS = 'vt_stats_csv_v1';
         const KEY_SETTINGS = 'vt_settings_csv_v1';
 
-        let WORDS = [];          // {en, cs, lesson}
-        let LESSON_TITLES = [];  // index 0 => lekce 1
+        let WORDS = [];          
+        let LESSON_TITLES = []; 
 
         const norm = (s) => (s || '').toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
         const uidOf = (w) => `${w.en}__${w.cs}`;
         const loadJSON = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
         const saveJSON = (k, v) => localStorage.setItem(k, JSON.stringify(v));
 
-        let stats = loadJSON(KEY_STATS, {}); // uid -> {ok,bad}
+        let stats = loadJSON(KEY_STATS, {}); 
         let settings = loadJSON(KEY_SETTINGS, { direction: 'en-cs', mode: 'random', theme: 'dark', lessons: [], target: 20, timed: false, timeMin: 10 });
 
         // ===== UI prvky =====
@@ -479,7 +468,6 @@
         const resetBtn = document.getElementById('resetBtn');
         const sessionInfoEl = document.getElementById('sessionInfo');
         const timerInfoEl = document.getElementById('timerInfo');
-
         const promptEl = document.getElementById('prompt');
         const promptMetaEl = document.getElementById('promptMeta');
         const answerEl = document.getElementById('answer');
@@ -488,19 +476,14 @@
         const dontKnowBtn = document.getElementById('dontKnowBtn');
         const hintBtn = document.getElementById('hintBtn');
         const answerBtns = document.getElementById('answerBtns');
-
         const countInfoEl = document.getElementById('countInfo');
         const filterInfoEl = document.getElementById('filterInfo');
         const dataInfoEl = document.getElementById('dataInfo');
-
         const themeBtn = document.getElementById('themeBtn');
-
-        // Kartičky panely
         const paneWrite = document.getElementById('paneWrite');
         const paneFlash = document.getElementById('paneFlash');
         const flashcardEl = document.getElementById('flashcard');
 
-        // ===== Motiv =====
         function applyTheme() { document.documentElement.setAttribute('data-theme', settings.theme || 'dark'); }
         themeBtn.addEventListener('click', () => { settings.theme = settings.theme === 'light' ? 'dark' : 'light'; saveJSON(KEY_SETTINGS, settings); applyTheme(); });
 
@@ -508,7 +491,6 @@
         function getDataUrl() { try { const u = new URL(location.href); return u.searchParams.get('data') || DEFAULT_DATA_URL; } catch { return DEFAULT_DATA_URL; } }
         function parseLesson(v) { const m = (v || '').toString().match(/\d+/); return m ? parseInt(m[0], 10) : 1; }
         function stripBOM(s) { return s && s.charCodeAt(0) === 0xFEFF ? s.slice(1) : s; }
-
         function splitCsvSemicolons(line) {
             const out = []; let cur = ''; let inQ = false;
             for (let i = 0; i < line.length; i++) {
@@ -528,7 +510,7 @@
 
         function parseCSVWithTitles(text) {
             const lines = stripBOM(text).split(/\r?\n/);
-            let idx = 0; while (idx < lines.length && !lines[idx].trim()) idx++; // první NEPRÁZDNÝ řádek = tituly
+            let idx = 0; while (idx < lines.length && !lines[idx].trim()) idx++;
             if (idx >= lines.length) return { titles: [], words: [] };
 
             const titles = splitCsvSemicolons(lines[idx].trim()).map(s => s.trim());
@@ -537,8 +519,8 @@
                 const raw = lines[i].trim();
                 if (!raw) continue;
                 const f = splitCsvSemicolons(raw);
-                const en = (f[0] || '').trim().replace(/^to\s+/i, ''); // ignoruj „to “
-                const cs = (f[1] || '').trim();                      // synonyma čárkou
+                const en = (f[0] || '').trim().replace(/^to\s+/i, '');
+                const cs = (f[1] || '').trim();           
                 const lesson = parseLesson(f[2] || '1');
                 if (en && cs) words.push({ en, cs, lesson });
             }
@@ -555,8 +537,6 @@
             LESSON_TITLES = parsed.titles;
             WORDS = parsed.words;
             if (!WORDS.length) { throw new Error('CSV neobsahuje žádná slovíčka.'); }
-
-            // inicializuj vybrané lekce
             const allowed = Array.from(new Set(WORDS.map(w => w.lesson))).sort((a, b) => a - b);
             if (settings.lessons.length === 0) { settings.lessons = allowed; }
             else { settings.lessons = settings.lessons.filter(n => allowed.includes(n)); if (!settings.lessons.length) settings.lessons = allowed; }
@@ -612,7 +592,7 @@
             let tmp = cleaned;
             [';', '/', '|'].forEach(sep => { tmp = tmp.split(sep).join(','); });
             tmp = tmp.replace(/\bnebo\b/gi, ',');
-            const rawParts = tmp.split(','); // čeština: synonyma čárkou
+            const rawParts = tmp.split(',');
             const parts = [];
             for (let p of rawParts) {
                 p = cleanDashesSpaces(p).trim();
@@ -622,7 +602,6 @@
                 p = cleanDashesSpaces(p);
                 if (p) parts.push(p);
             }
-            // deduplikace dle normalizace
             const seen = new Set(); const out = [];
             for (const p of parts) { const key = norm(p); if (!seen.has(key)) { seen.add(key); out.push(p); } }
             return out;
@@ -632,18 +611,15 @@
 
         // ===== Sezení =====
         let session = { active: false, target: 20, left: 0, ok: 0, bad: 0, timed: false, deadline: null, timerId: null };
-        let current = null; // {w, ask, expect, dir}
+        let current = null;
         let flashRevealed = false;
 
         function isFlashcardsMode() { return modeEl.value === 'flashcards'; }
 
         function setPracticeEnabled(on) {
             const flash = isFlashcardsMode();
-            // Panely
             paneWrite.style.display = flash ? 'none' : 'flex';
             paneFlash.style.display = !flash ? 'none' : 'flex';
-
-            // Povolení prvků psacího panelu
             [answerEl, checkBtn, dontKnowBtn, hintBtn].forEach(el => {
                 if (el) el.disabled = !on || flash;
             });
@@ -655,7 +631,6 @@
             setPracticeEnabled(session.active);
         });
 
-        // auto-grow textarea
         function autogrow(el) {
             el.style.height = 'auto';
             el.style.height = Math.min(200, el.scrollHeight) + 'px';
@@ -708,7 +683,7 @@
         // ===== Výběr dalšího slova =====
         function chooseWord() {
             const pool = filteredWords(); if (!pool.length) return null;
-            const m = (modeEl.value === 'weak' ? 'weak' : 'random'); // výběr slov (flashcards jen mění UI)
+            const m = (modeEl.value === 'weak' ? 'weak' : 'random');
             if (m === 'random') return pool[Math.floor(Math.random() * pool.length)];
             const arr = pool.slice().sort((a, b) => { const sa = stats[uidOf(a)] || { ok: 0, bad: 0 }; const sb = stats[uidOf(b)] || { ok: 0, bad: 0 }; const wa = (sa.bad || 0) - (sa.ok || 0); const wb = (sb.bad || 0) - (sb.ok || 0); return wb - wa; });
             const k = Math.max(3, Math.ceil(arr.length * 0.3)); return arr[Math.floor(Math.random() * k)];
@@ -724,7 +699,6 @@
             const ask = dir === 'en-cs' ? w.en : w.cs;
             const expect = dir === 'en-cs' ? w.cs : w.en;
             current = { w, ask, expect, dir };
-
             document.getElementById('prompt').textContent = ask;
             promptMetaEl.textContent = `Cíl: ${session.target} • Zbývá: ${session.left} • Správně: ${session.ok} • Špatně: ${session.bad} • Lekce: ${(LESSON_TITLES[w.lesson - 1] || ('Lekce ' + w.lesson))}`;
 
@@ -732,14 +706,13 @@
                 flashcardEl.dataset.state = '';
                 flashcardEl.innerHTML = '<span class="hint">Ukázat →</span>';
             }
-
             answerEl.focus();
             session.left--; refreshCounts();
         }
 
         // ===== Kontrola + synonyma =====
         function check() {
-            if (!current || !session.active || isFlashcardsMode()) return; // v kartičkách nekontrolujeme
+            if (!current || !session.active || isFlashcardsMode()) return;
             let userRaw = cleanDashesSpaces(answerEl.value || '');
             if (!userRaw) { resultEl.textContent = 'Zadej odpověď.'; resultEl.className = 'result warn'; return; }
             const user = norm(userRaw);
@@ -800,10 +773,10 @@
             if (!current) return;
             if (flashcardEl.dataset.state !== 'shown') {
                 flashcardEl.dataset.state = 'shown';
-                flashcardEl.textContent = String(current.expect);  // zobraz překlad (včetně synonym z CSV)
+                flashcardEl.textContent = String(current.expect);
             } else {
                 flashcardEl.dataset.state = '';
-                pickNext();                                        // další slovíčko
+                pickNext();                                  
             }
         }
         flashcardEl.addEventListener('click', showFlashcard);
@@ -839,7 +812,7 @@
             }
             renderLessons();
             refreshCounts();
-            setPracticeEnabled(false); // povolí se až po Start
+            setPracticeEnabled(false);
         }
         init();
     </script>
