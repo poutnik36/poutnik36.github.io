@@ -14,14 +14,14 @@
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-      /* Pravá karta nesmí centrovat celý obsah – roztažení */
+      /* Pravá karta – žádné centrování celé karty */
       #answerCard {
           display: flex;
-          align-items: stretch;
-          justify-content: stretch;
+          align-items: stretch; /* OK */
+          justify-content: flex-start; /* místo neplatného 'stretch' */
       }
 
-      /* Sloupec: textarea nahoře (v prostoru), tlačítka dole vpravo */
+      /* Tlačítka: sloupec dole vpravo */
       #answerCol {
           display: flex;
           flex-direction: column;
@@ -29,7 +29,6 @@
           min-height: 140px;
       }
 
-          /* Textarea zůstává pěkně uprostřed oblasti pro psaní */
           #answerCol .fakeinputwrap {
               flex: 1;
               display: flex;
@@ -37,18 +36,18 @@
               justify-content: center;
           }
 
-          /* TLAČÍTKA: sloupec, přichycené ke dnu a k PRAVÉMU okraji */
+          /* ← tady je hlavní fix */
           #answerCol .btnrow {
               margin-top: auto; /* dolů */
               display: flex;
               flex-direction: column; /* sloupec */
-              align-items: end; /* vpravo */
-              justify-content: end;
+              align-items: flex-end; /* vpravo (ne 'end') */
+              justify-content: flex-end; /* dolů (ne 'end') */
               gap: .5rem;
           }
 
               #answerCol .btnrow .btn {
-                  width: fit-content; /* žádné natažení do šířky */
+                  width: fit-content;
               }
       @media (max-width: 640px) {
           #answerCol .btnrow {
@@ -411,7 +410,8 @@
 
 function setPracticeEnabled(on){
     const flash = isFlashcardsMode();
-
+    // kartička
+    flashcardEl.hidden = !on || !flash;
     // celé psací UI: obal + (pro jistotu) tlačítka a textarea
     const answerCol = document.getElementById('answerCol');
     const answerBtns = document.getElementById('answerBtns');
@@ -427,8 +427,7 @@ function setPracticeEnabled(on){
     dontKnowBtn.disabled = !on || flash;
     hintBtn.disabled = !on || flash;
 
-    // kartička
-    flashcardEl.hidden = !on || !flash;
+    
 }
 
 modeEl.addEventListener('change', ()=>{
