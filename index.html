@@ -14,35 +14,47 @@
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-      /* Pravá karta = flex kontejner, ne centrování celé výšky */
+      /* Pravá karta nesmí centrovat celý obsah – roztažení */
       #answerCard {
           display: flex;
-          align-items: stretch; /* přestane centrovat vertikálně */
-          justify-content: stretch; /* přestane centrovat horizontálně */
+          align-items: stretch;
+          justify-content: stretch;
       }
 
-      /* Sloupec uvnitř pravé karty: textarea nahoře, tlačítka dole */
+      /* Sloupec: textarea nahoře (v prostoru), tlačítka dole vpravo */
       #answerCol {
           display: flex;
           flex-direction: column;
           width: 100%;
-          min-height: 140px; /* ať má karta rozumnou výšku i bez textu */
+          min-height: 140px;
       }
 
-          /* Textarea zůstává „na středu“ – můžeme ji centrovat v rámci volného prostoru */
+          /* Textarea zůstává pěkně uprostřed oblasti pro psaní */
           #answerCol .fakeinputwrap {
-              flex: 1; /* vezme zbylé místo */
+              flex: 1;
               display: flex;
-              align-items: center; /* vertikální centrování jen pro oblast psaní */
-              justify-content: center; /* horizontální centrování */
+              align-items: center;
+              justify-content: center;
           }
 
-          /* Tlačítka vždy dolů */
+          /* TLAČÍTKA: sloupec, přichycené ke dnu a k PRAVÉMU okraji */
           #answerCol .btnrow {
-              margin-top: auto; /* přitlačí blok tlačítek ke dnu */
-              padding-top: .6rem;
-              justify-content: center; /* horizontální zarovnání nech klidně na střed */
+              margin-top: auto; /* dolů */
+              display: flex;
+              flex-direction: column; /* sloupec */
+              align-items: flex-end; /* vpravo */
+              justify-content: flex-end;
+              gap: .5rem;
           }
+
+              #answerCol .btnrow .btn {
+                  width: fit-content; /* žádné natažení do šířky */
+              }
+      @media (max-width: 640px) {
+          #answerCol .btnrow {
+              align-items: center;
+          }
+      }
     body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--text)}
     header{position:sticky; top:0; z-index:10; backdrop-filter:saturate(1.2) blur(8px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--border)}
     .wrap{max-width:1100px; margin-inline:auto; padding:1rem}
@@ -189,11 +201,11 @@
         </div>
 
         <div class="innercard" id="answerCard">
-            <!-- PSACÍ REŽIM -->
             <div class="answer-col" id="answerCol">
                 <div class="fakeinputwrap">
                     <textarea id="answer" rows="1" placeholder="Sem napiš odpověď…" disabled></textarea>
                 </div>
+
                 <div class="btnrow" id="answerBtns">
                     <button class="btn" id="checkBtn" disabled>✅ Zkontrolovat</button>
                     <button class="btn secondary" id="dontKnowBtn" disabled>🤷‍♂️ Nevím</button>
@@ -201,7 +213,6 @@
                 </div>
             </div>
 
-            <!-- KARTIČKY -->
             <div class="flashcard" id="flashcard" hidden title="Klikni pro zobrazení / další"></div>
         </div>
       </div>
