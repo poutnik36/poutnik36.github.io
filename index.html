@@ -247,13 +247,15 @@
                 inset: 0;
             }
 
-        /* Psací panel: mřížka (textarea uprostřed, akce dole vpravo) */
+        /* Psací panel: 2 sloupce – vlevo input, vpravo akce */
         #paneWrite {
             display: grid;
-            grid-template-rows: 1fr auto;
-            gap: .6rem;
+            grid-template-columns: 1fr auto; /* <- dřív byly řádky, teď 2 sloupce */
+            align-items: center; /* srovná vertikálně na střed */
+            gap: .8rem;
         }
 
+            /* textbox zůstává vycentrovaný uvnitř své oblasti */
             #paneWrite .write-center {
                 display: flex;
                 align-items: center;
@@ -277,23 +279,33 @@
                 word-break: break-word;
             }
 
+            /* sloupec tlačítek vpravo, svisle uprostřed */
             #paneWrite .write-actions {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-end;
-                justify-content: flex-end;
                 gap: .5rem;
-                padding: .5rem;
+                align-items: flex-end; /* tlačítka zarovnaná k pravému okraji sloupce */
+                justify-content: center; /* svisle doprostřed k textboxu */
+                justify-self: end; /* připlácne celý sloupec ke krajní pravé hraně */
+                padding: .5rem 0;
             }
 
                 #paneWrite .write-actions .btn {
                     width: fit-content;
                 }
 
-        @media (max-width:640px) {
-            #paneWrite .write-actions {
-                align-items: center;
+        /* Na úzkých mobilech je lepší tlačítka odsadit pod input */
+        @media (max-width: 700px) {
+            #paneWrite {
+                grid-template-columns: 1fr; /* jeden sloupec */
+                grid-template-rows: auto auto; /* a akce půjdou pod input */
             }
+
+                #paneWrite .write-actions {
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: .5rem;
+                }
         }
 
         /* Kartičky – velká vycentrovaná dlaždice */
@@ -628,13 +640,13 @@
         function setPracticeEnabled(on) {
             const flash = isFlashcardsMode();
             // Panely
-            paneWrite.hidden = !on || flash;
-            paneFlash.hidden = !on || !flash;
+            paneWrite.style.display = !flash ? 'none' : 'flex';
+            paneFlash.style.display = flash ? 'none' : 'flex';
 
             // Povolení prvků psacího panelu
-            [answerEl, checkBtn, dontKnowBtn, hintBtn].forEach(el => {
-                if (el) el.disabled = !on || flash;
-            });
+            //[answerEl, checkBtn, dontKnowBtn, hintBtn].forEach(el => {
+            //    if (el) el.disabled = !on || flash;
+            //});
         }
 
         modeEl.addEventListener('change', () => {
