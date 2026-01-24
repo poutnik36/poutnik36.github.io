@@ -644,9 +644,9 @@
             paneFlash.style.display = !flash ? 'none' : 'flex';
 
             // Povolení prvků psacího panelu
-            //[answerEl, checkBtn, dontKnowBtn, hintBtn].forEach(el => {
-            //    if (el) el.disabled = !on || flash;
-            //});
+            [answerEl, checkBtn, dontKnowBtn, hintBtn].forEach(el => {
+                if (el) el.disabled = !on || flash;
+            });
         }
 
         modeEl.addEventListener('change', () => {
