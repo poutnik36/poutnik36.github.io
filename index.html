@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Slovíčka - procvičování</title>
+    <title>Angličtina pro policejní praxi - slovíčka</title>
     <meta name="description" content="Lehká webová aplikace pro opakování anglických slovíček podle lekcí (CSV: první řádek názvy lekcí)." />
     <style>
         :root {
@@ -640,8 +640,8 @@
         function setPracticeEnabled(on) {
             const flash = isFlashcardsMode();
             // Panely
-            paneWrite.style.display = !flash ? 'none' : 'flex';
-            paneFlash.style.display = flash ? 'none' : 'flex';
+            paneWrite.style.display = flash ? 'none' : 'flex';
+            paneFlash.style.display = !flash ? 'none' : 'flex';
 
             // Povolení prvků psacího panelu
             //[answerEl, checkBtn, dontKnowBtn, hintBtn].forEach(el => {
