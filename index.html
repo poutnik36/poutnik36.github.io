@@ -17,8 +17,8 @@
       /* Pravá karta nesmí centrovat celý obsah – roztažení */
       #answerCard {
           display: flex;
-          align-items: flex-end;
-          justify-content: flex-end;
+          align-items: stretch;
+          justify-content: stretch;
       }
 
       /* Sloupec: textarea nahoře (v prostoru), tlačítka dole vpravo */
@@ -201,18 +201,20 @@
         </div>
 
         <div class="innercard" id="answerCard">
-            <div class="fakeinputwrap">
-                <textarea id="answer" rows="1" placeholder="Sem napiš odpověď…" disabled></textarea>
-            </div>
-            <div class="btnrow">
-                <button class="btn" id="checkBtn" disabled>✅ Zkontrolovat</button>
-                <button class="btn secondary" id="dontKnowBtn" disabled>🤷‍♂️ Nevím</button>
-                <button class="btn secondary" id="hintBtn" disabled>💡 Nápověda</button>
+            <div class="answer-col" id="answerCol">
+                <div class="fakeinputwrap">
+                    <textarea id="answer" rows="1" placeholder="Sem napiš odpověď…" disabled></textarea>
+                </div>
+
+                <div class="btnrow" id="answerBtns">
+                    <button class="btn" id="checkBtn" disabled>✅ Zkontrolovat</button>
+                    <button class="btn secondary" id="dontKnowBtn" disabled>🤷‍♂️ Nevím</button>
+                    <button class="btn secondary" id="hintBtn" disabled>💡 Nápověda</button>
+                </div>
             </div>
 
             <div class="flashcard" id="flashcard" hidden title="Klikni pro zobrazení / další"></div>
         </div>
-      </div>
 
       <div class="result" id="result"></div>
     </section>
