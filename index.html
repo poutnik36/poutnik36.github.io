@@ -189,15 +189,20 @@
         </div>
 
         <div class="innercard" id="answerCard">
-          <!-- běžné psaní -->
-          <div class="fakeinputwrap"><textarea id="answer" rows="1" placeholder="Sem napiš odpověď…" disabled></textarea></div>
-          <div class="btnrow" id="answerBtns">
-            <button class="btn" id="checkBtn" disabled>✅ Zkontrolovat</button>
-            <button class="btn secondary" id="dontKnowBtn" disabled>🤷‍♂️ Nevím</button>
-            <button class="btn secondary" id="hintBtn" disabled>💡 Nápověda</button>
-          </div>
-          <!-- kartičky -->
-          <div class="flashcard" id="flashcard" hidden title="Klikni pro zobrazení / další"></div>
+            <!-- PSACÍ REŽIM -->
+            <div class="answer-col" id="answerCol">
+                <div class="fakeinputwrap">
+                    <textarea id="answer" rows="1" placeholder="Sem napiš odpověď…" disabled></textarea>
+                </div>
+                <div class="btnrow" id="answerBtns">
+                    <button class="btn" id="checkBtn" disabled>✅ Zkontrolovat</button>
+                    <button class="btn secondary" id="dontKnowBtn" disabled>🤷‍♂️ Nevím</button>
+                    <button class="btn secondary" id="hintBtn" disabled>💡 Nápověda</button>
+                </div>
+            </div>
+
+            <!-- KARTIČKY -->
+            <div class="flashcard" id="flashcard" hidden title="Klikni pro zobrazení / další"></div>
         </div>
       </div>
 
